@@ -1,0 +1,292 @@
+meta:
+  version: 1
+  name: Tailwind Landing Page
+  license: MIT
+  author: Tailwind Toolbox
+  exportable: true
+  homepageUrl: https://github.com/tailwindtoolbox/Landing-Page
+  filePaths:
+    - license.txt
+    - index.html
+    - assets/script.js
+    - assets/favicon.png
+    - assets/og-image.png
+    - assets/hero.png
+    - assets/world.svg
+    - assets/logo.png
+    - content/markdown/reason.md
+
+dataContract:
+
+  LANDING:
+    sections:
+      TOP:
+        properties:
+          PRE_TITLE:
+            type: (text)
+            defaultValue: What business are you?
+          TITLE:
+            type: (text)
+            defaultValue: Main Hero Message to sell yourself!
+          POST_TITLE:
+            type: (text)
+            defaultValue: Sub-hero message, not too long and not too short. Make it just right!
+          IMAGE:
+            type: (image)
+            defaultFilePath: assets/hero.png
+          ACTIONS:
+            type: (collection)
+            defaultOccurrences: 2
+            properties:
+              TITLE:
+                type: (text)
+                defaultValue: Action
+              URL:
+                type: (text)
+                defaultValue: http://google.com/
+              OPEN_IN_NEW_WINDOW:
+                type: (boolean)
+                defaultValue: true
+
+      LINES:
+        properties:
+          SHOW:
+            type: (boolean)
+            defaultValue: true
+          TITLE:
+            type: (text)
+            defaultValue: Lines
+          LINES:
+            type: (collection)
+            defaultOccurrences: 1
+            properties:
+              TITLE:
+                type: (text)
+                defaultValue: Lorem ipsum dolor sit amet
+              DESCRIPTION:
+                type: (markdown)
+                defaultFilePath: content/markdown/reason.md
+              DIRECTION:
+                type: (choice)
+                values: [left, right]
+                defaultValue: left
+              IMAGE:
+                type: (image)
+                defaultFilePath: assets/world.svg
+
+      COLUMNS:
+        properties:
+          SHOW:
+            type: (boolean)
+            defaultValue: true
+          TITLE:
+            type: (text)
+            defaultValue: Columns
+          COLUMNS:
+            type: (collection)
+            defaultOccurrences: 3
+            properties:
+              SUBTITLE:
+                type: (text)
+                defaultValue: Getting started
+              TITLE:
+                type: (text)
+                defaultValue: Lorem ipsum dolor sit amet
+              DESCRIPTION:
+                type: (markdown)
+                defaultFilePath: content/markdown/reason.md
+              ACTION_TITLE:
+                type: (text)
+                defaultValue: Action
+              ACTION_URL:
+                type: (text)
+                required: false
+                defaultValue: http://google.com/
+              OPEN_IN_NEW_WINDOW:
+                type: (boolean)
+                defaultValue: true
+
+      PRICING:
+        properties:
+          SHOW:
+            type: (boolean)
+            defaultValue: true
+          TITLE:
+            type: (text)
+            defaultValue: Pricing
+          PRICES:
+            type: (collection)
+            defaultOccurrences: 3
+            properties:
+              TITLE:
+                type: (text)
+                defaultValue: Basic
+              STYLE:
+                type: (choice)
+                values: [primary, secondary]
+                defaultValue: secondary
+              FEATURE_1:
+                type: (text)
+                defaultValue: Feature 1
+              FEATURE_2:
+                type: (text)
+                defaultValue: Feature 2
+                required: false
+              FEATURE_3:
+                type: (text)
+                defaultValue: Feature 3
+                required: false
+              FEATURE_4:
+                type: (text)
+                defaultValue: Feature 4
+                required: false
+              FEATURE_5:
+                type: (text)
+                required: false
+              FEATURE_6:
+                type: (text)
+                required: false
+              FEATURE_7:
+                type: (text)
+                required: false
+              FEATURE_8:
+                type: (text)
+                required: false
+              PRICE:
+                type: (text)
+                defaultValue: 2 EUR
+              PRICE_PERIOD:
+                type: (text)
+                defaultValue: / per user
+              ACTION_TITLE:
+                type: (text)
+                defaultValue: Action
+              ACTION_URL:
+                type: (text)
+                defaultValue: http://google.com/
+                required: false
+              OPEN_IN_NEW_WINDOW:
+                type: (boolean)
+                defaultValue: true
+
+      CALL_TO_ACTION:
+        properties:
+          SHOW:
+            type: (boolean)
+            defaultValue: true
+          TITLE:
+            type: (text)
+            defaultValue: Call to Action
+          SUBTITLE:
+            type: (text)
+            defaultValue: Main Hero Message to sell yourself!
+          ACTION_TITLE:
+            type: (text)
+            defaultValue: Action
+          ACTION_URL:
+            type: (text)
+            required: false
+            defaultValue: http://google.com/
+          OPEN_IN_NEW_WINDOW:
+            type: (boolean)
+            defaultValue: true
+
+  LINKS:
+    sections:
+      LINKS:
+        properties:
+          LINKS:
+            type: (collection)
+            defaultOccurrences: 3
+            properties:
+              TITLE:
+                type: (text)
+                defaultValue: Link
+              URL:
+                type: (text)
+                defaultValue: http://google.com/
+              OPEN_IN_NEW_WINDOW:
+                type: (boolean)
+                defaultValue: true
+              HEADER:
+                type: (boolean)
+                defaultValue: true
+              FOOTER:
+                type: (boolean)
+                defaultValue: true
+
+  COMMON:
+    _label: Common
+    sections:
+      THEME:
+        properties:
+          COLOR_A:
+            type: (color)
+            defaultValue: '#d53369'
+          COLOR_B:
+            type: (color)
+            defaultValue: '#daae51'
+
+      GENERAL:
+        properties:
+          SITE_NAME:
+            type: (text)
+            defaultValue: Landing
+          SITE_LOGO:
+            type: (image)
+            width: 256
+            height: 256
+            defaultFilePath: assets/logo.png
+
+      META:
+        _label: Meta
+        properties:
+          LANGUAGE:
+            type: (choice)
+            valuesSet: (iso6391Languages)
+            defaultValue: en
+          DIRECTION:
+            type: (choice)
+            valuesSet: (direction)
+            defaultValue: auto
+          TITLE:
+            type: (text)
+            defaultValue: My Page Title
+            _label: Page Title
+          DESCRIPTION:
+            type: (text)
+            defaultValue: My Page Description
+            _label: Page Description
+          FAVICON:
+            type: (image)
+            width: 32
+            height: 32
+            defaultFilePath: assets/favicon.png
+          OG_IMAGE:
+            type: (image)
+            width: 1200
+            height: 630
+            defaultFilePath: assets/og-image.png
+            _label: Open Graph Image
+          PRE_HTML:
+            type: (html)
+            _label: Pre HTML
+            _description: i.e. cookie banner
+            required: false
+      FOOTER:
+        properties:
+          COPYRIGHT:
+            type: (text)
+            defaultValue: All rights reserved
+          POWERED_BY:
+            type: (boolean)
+            defaultValue: true
+          POST_HTML:
+            type: (html)
+            _label: Post HTML
+            _description: i.e. plugins, tracking
+            required: false
+pages:
+  INDEX:
+    filePath: index.html
+    templateFilePath: index.html

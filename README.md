@@ -8,12 +8,15 @@ To get more information check [T3MPL Editor](https://github.com/b4rtaz/t3mpl-edi
 
 ## Templates
 
-* **App Landing Page** by [Robin Bansal](https://github.com/robinbansal/App-Landing_Page)
-* **Auto App Landing Page** by [Emil Baehr](https://github.com/milbaehr/automatic-app-landing-page)
-* **Dark Poole** by [Andrew Park](https://github.com/andrewhwanpark/dark-poole)
-* **Fuse Core** by [Thomas Jensen](https://github.com/tsjensen/fuse-core)
-* **Minimal Resume** by [Mauricio Urraco](https://github.com/murraco/jekyll-theme-minimal-resume)
-* **Mobile App Landing Page** by [Sandoche Adittane](https://github.com/sandoche/Mobile-app-landingpage-template)
-* **Modern Resume** by [James Grant](https://github.com/sproogen/modern-resume-theme)
-* **Scriptor** by [JustGoodThemes](https://justgoodthemes.com/)
-* **T3MPL One** by my ([Bartlomiej Tadych](http://n4no.com/))
+``[name](path) - [category] - [author](url) - [license]``
+
+* [App Landing Page](/app-landing-page) - Mobile App - [Robin Bansal](https://github.com/robinbansal/App-Landing_Page) - MIT
+* [Auto App Landing Page](/auto-app-landing-page) - Mobile App - [Emil Baehr](https://github.com/milbaehr/automatic-app-landing-page) - MIT
+* [Dark Poole](/dark-poole) - Blog - [Andrew Park](https://github.com/andrewhwanpark/dark-poole) - MIT
+* [Fuse Core](/fuse-core) - Personal Website - [Thomas Jensen](https://github.com/tsjensen/fuse-core) - CCA4I
+* [Minimal Resume](/minimal-resume) - Resume - [Mauricio Urraco](https://github.com/murraco/jekyll-theme-minimal-resume) - MIT
+* [Mobile App Landing Page](/mobile-app-landing-page) - Mobile App - [Sandoche Adittane](https://github.com/sandoche/Mobile-app-landingpage-template) - MIT
+* [Modern Resume](/modern-resume) - Resume -  [James Grant](https://github.com/sproogen/modern-resume-theme) - MIT
+* [Scriptor](/scriptor) - Blog - [JustGoodThemes](https://justgoodthemes.com/) - MIT
+* [T3MPL One](/t3mpl-one) - Landing Page - [Bartlomiej Tadych](http://n4no.com/) - MIT
+* [Tailwind Landing Page](/tailwind-landing-page) - Landing Page - [Tailwind Toolbox](https://github.com/tailwindtoolbox/Landing-Page) - MIT
