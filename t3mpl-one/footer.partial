@@ -1,0 +1,15 @@
+</div>
+<footer>
+	<p>{{{$copyright}}} {{COMMON.FOOTER.COPYRIGHT}}</p>
+	{{#if COMMON.FOOTER.POWERED_BY}}
+		<p>{{{$powered_by}}}</p>
+	{{/if}}
+	{{#if COMMON.FOOTER.TEMPLATE_BY}}
+		<p class="by">Template by b4rtaz, <a href="http://n4no.com/" target="_blank">N4NO.com</a></p>
+	{{/if}}
+</footer>
+{{#if COMMON.FOOTER.POST_HTML}}
+	{{{$html COMMON.FOOTER.POST_HTML}}}
+{{/if}}
+</body>
+</html>

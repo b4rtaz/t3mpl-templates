@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html dir="{{COMMON.META.DIRECTION}}" lang="{{COMMON.META.LANGUAGE}}">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>{{COMMON.META.TITLE}}</title>
+
+		<meta name="description" content="{{COMMON.META.DESCRIPTION}}" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" href="{{$image COMMON.META.FAVICON}}" />
+
+		<link rel="stylesheet" type="text/css" crossorigin="anonymous"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+			integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk">
+		{{{$css 'assets/style.css'}}}
+		<link rel="stylesheet" type="text/css" crossorigin="anonymous"
+			href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+			integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc">
+		<link rel="stylesheet" type="text/css"
+			href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin">
+			
+		{{#if COMMON.META.PRE_HTML}}
+			{{{$html COMMON.META.PRE_HTML}}}
+		{{/if}}
+	</head>
+	<body class="fullscreen-background" style="background-image: url('{{{$image SITE.SITE.BACKGROUND}}}');">
+		<div class="glass-pane">
+			<div class="container fuse-core-content pb-4">
+				<div class="row pt-sm-4">
+					<div class="col text-center"><img id="avatar" class="my-3 my-sm-4" alt=""
+						src="{{{$image SITE.SITE.AVATAR}}}"></div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<h1 class="text-center font-weight-bold">{{SITE.SITE.TITLE}}</h1>
+						<h3 class="text-center font-weight-light">{{SITE.SITE.SUBTITLE}}</h3>
+					</div>
+				</div>
+				<div class="row justify-content-center links pt-1 pt-sm-2">
+					{{#each SITE.SOCIAL.SOCIALS}}
+					<div class="col-xs-12 col-sm-2 col-lg-1 px-3 px-sm-0 mt-2 mt-sm-3 text-sm-center">
+						<a href="{{URL}}" title="{{TITLE}}" target="_blank">
+							<i class="fab fa-{{ICON}} fa-fw"></i>
+							<span class="d-inline d-sm-none">{{TITLE}}</span>
+						</a>
+					</div>
+					{{/each}}
+				</div>
+				<div class="row justify-content-center">
+					<div class="col mt-3 text-sm-center fuse-core-extra">
+						{{{$markdown SITE.SITE.DESCRIPTION}}}
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col text-center">
+						{{{$copyright}}} {{COMMON.FOOTER.COPYRIGHT}}
+						- Built on the <a href="https://github.com/tsjensen/fuse-core">Fuse Core</a>
+						{{#if COMMON.FOOTER.POWERED_BY}} - {{{$powered_by}}}{{/if}}
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		{{#if COMMON.FOOTER.POST_HTML}}
+			{{{$html COMMON.FOOTER.POST_HTML}}}
+		{{/if}}
+	</body>
+</html>

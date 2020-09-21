@@ -1,0 +1,28 @@
+<main>
+	<div class="posts">
+		<article class="post">
+			<h1 class="post-title">
+				{{{$page_link article.FILE_PATH article.DATA.TITLE}}}
+			</h1>
+			<time datetime="{{article.DATA.DATE}}" class="post-date">
+				{{$format_dt article.DATA.DATE COMMON.CULTURE.DATE_FORMAT}}
+			</time>
+
+			{{{$markdown article.DATA.CONTENT}}}
+		</article>
+	</div>
+	{{#if showPagination}}
+	<div class="pagination">
+		{{#if article.PREVIOUS_PAGE}}
+			{{{$page_link article.PREVIOUS_PAGE.FILE_PATH 'Newer' 'pagination-item newer'}}}
+		{{else}}
+			<span class="pagination-item newer">{{ARTICLES.PAGINATION.NEXT}}</span>
+		{{/if}}
+		{{#if article.NEXT_PAGE}}
+			{{{$page_link article.NEXT_PAGE.FILE_PATH 'Older' 'pagination-item older'}}}
+		{{else}}
+			<span class="pagination-item older">{{ARTICLES.PAGINATION.PREVIOUS}}</span>
+		{{/if}}
+	</div>
+	{{/if}}
+</main>

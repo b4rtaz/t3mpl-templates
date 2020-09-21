@@ -1,0 +1,188 @@
+meta:
+  version: 1
+  name: Minimal Resume
+  license: MIT
+  author: Mauricio Urraco
+  exportable: true
+  homepageUrl: https://github.com/murraco/jekyll-theme-minimal-resume
+  filePaths:
+    - license.txt
+    - index.html
+    - assets/_icon.partial
+    - assets/favicon.png
+    - assets/css/style.css
+    - assets/js/main.js
+    - assets/js/sweet-scroll.min.js
+    - assets/fonts/devicon.ttf
+    - assets/fonts/devicon.woff
+    - assets/fonts/fontawesome-webfont.ttf
+    - assets/fonts/fontawesome-webfont.woff
+    - assets/fonts/fontawesome-webfont.woff2
+
+dataContract:
+
+  RESUME:
+    _label: Resume
+    sections:
+      BASIC:
+        _label: Basic
+        properties:
+          RESUME_TITLE:
+            type: (text)
+            defaultValue: Mauricio Urraco
+            _label: Resume Title
+          RESUME_DESCRIPTION:
+            type: (text)
+            defaultValue: Software Engineer
+            _label: Resume Description
+          EMAIL:
+            type: (text)
+            required: false
+            defaultValue: example@dot.com
+            _label: E-mail
+          EMAIL_DESCRIPTION:
+            type: (text)
+            required: false
+            defaultValue: Send e-mail
+            _label: E-mail Description
+          INSTAGRAM_URL:
+            type: (text)
+            required: false
+            defaultValue: https://www.instagram.com/mauriciourraco7
+            _label: Instagram Url
+          INSTAGRAM_DESCRIPTION:
+            type: (text)
+            required: false
+            defaultValue: My Instagram
+            _label: Instagram Description
+          FACEBOOK_URL:
+            type: (text)
+            required: false
+            defaultValue: https://www.facebook.com/mauricio.urraco
+            _label: Facebook Url
+          FACEBOOK_DESCRIPTION:
+            type: (text)
+            required: false
+            defaultValue: My Facebook
+            _label: Facebook Description
+          LINKEDIN_URL:
+            type: (text)
+            required: false
+            defaultValue: https://www.linkedin.com/in/murraco
+            _label: LinkedIn Url
+          LINKEDIN_DESCRIPTION:
+            type: (text)
+            required: false
+            defaultValue: My LinkedIn
+            _label: LinkedIn Description
+          GITHUB_URL:
+            type: (text)
+            required: false
+            defaultValue: https://github.com/murraco
+            _label: GitHub Url
+          GITHUB_DESCRIPTION:
+            type: (text)
+            required: false
+            defaultValue: My GitHub
+            _label: GitHub Description
+          PARTICLES:
+            type: (boolean)
+            defaultValue: true
+            _label: Particles
+
+      EXPERIENCE:
+        _label: Experience
+        properties:
+          TITLE:
+            type: (text)
+            defaultValue: My Expertise
+            _label: Title
+          DESCRIPTION:
+            type: (text)
+            defaultValueSet: (lipsumXL)
+            _label: Description
+          SHOW_SPECS:
+            type: (boolean)
+            _label: Show specializations
+            defaultValue: true
+          SPECS:
+            type: (collection)
+            _label: Specializations
+            min: 3
+            max: 3
+            properties:
+              TITLE:
+                type: (text)
+                _label: Title
+                defaultValue: My Spec
+              DESCRIPTION:
+                type: (text)
+                _label: Description
+                defaultValueSet: (lipsumL)
+              ICON1:
+                type: (choice)
+                values: [html5, sass, bootstrap, java, js, python, debian, npm, git]
+                defaultValue: html5
+                _label: Icon 1
+              ICON2:
+                type: (choice)
+                values: [html5, sass, bootstrap, java, js, python, debian, npm, git]
+                defaultValue: sass
+                _label: Icon 2
+              ICON3:
+                type: (choice)
+                values: [html5, sass, bootstrap, java, js, python, debian, npm, git]
+                defaultValue: python
+                _label: Icon 3
+      FOOTER:
+        _label: Footer
+        properties:
+          COPYRIGHT:
+            type: (text)
+            defaultValue: All Rights Reserved, Mauricio Urraco
+            _label: Copyright
+          POWERED_BY:
+            type: (boolean)
+            defaultValue: true
+            _label: Powered By
+          FOOTER_HTML:
+            type: (html)
+            _label: HTML for plugins, tracking
+            required: false
+
+  COMMON:
+    _label: Common
+    sections:
+      SEO:
+        _label: SEO
+        _description: Common settings
+        properties:
+          PAGE_LANGUAGE:
+            type: (choice)
+            valuesSet: (iso6391Languages)
+            defaultValue: en
+            _label: Page Language
+          PAGE_TITLE:
+            type: (text)
+            defaultValue: My Title
+            _label: Page Title
+          PAGE_DESCRIPTION:
+            type: (text)
+            defaultValue: My Description
+            _label: Page Description
+          FAVICON:
+            type: (image)
+            width: 32
+            height: 32
+            _label: Favicon
+            defaultFilePath: assets/favicon.png
+          DIRECTION:
+            type: (choice)
+            valuesSet: (direction)
+            defaultValue: auto
+            _label: Direction
+
+pages:
+  INDEX:
+    filePath: index.html
+    templateFilePath: index.html

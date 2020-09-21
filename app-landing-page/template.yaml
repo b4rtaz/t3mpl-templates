@@ -1,0 +1,228 @@
+meta:
+  version: 1
+  name: App Landing Page
+  license: MIT
+  author: Robin Bansal
+  exportable: true
+  homepageUrl: https://github.com/robinbansal/App-Landing_Page
+  filePaths:
+    - style.css
+    - parallax-background.jpg
+    - index.html
+    - bootstrap.min.css
+    - background.jpg
+    - og-image.png
+    - app-02.png
+    - favicon.png
+    - font-awesome/css/font-awesome.css
+    - font-awesome/fonts/fontawesome-webfont.eot
+    - font-awesome/fonts/fontawesome-webfont.woff
+    - font-awesome/fonts/fontawesome-webfont.woff2
+    - font-awesome/fonts/fontawesome-webfont.ttf
+    - font-awesome/fonts/fontawesome-webfont.svg
+
+dataContract:
+  HOME:
+    _label: Home Page
+    sections:
+      STORIES:
+        _label: Stories
+        properties:
+          GOOGLE_PLAY_LINK:
+            type: (text)
+            required: false
+            _label: Google Play URL
+            defaultValue: https://play.google.com/store?hl=en
+          GOOGLE_PLAY_LABEL:
+            type: (text)
+            required: false
+            defaultValue: Google Play
+            _label: Google Play Label
+          IOS_STORE_LINK:
+            type: (text)
+            required: false
+            defaultValue: https://www.apple.com/en/ios/app-store/
+            _label: App Store URL
+          IOS_STORE_LABEL:
+            type: (text)
+            required: false
+            defaultValue: App Store
+            _label: App Store Label
+          PHONE_IMAGE:
+            type: (image)
+            _label: Phone Image
+            width: 353
+            height: 674
+            defaultFilePath: app-02.png
+
+      TOP:
+        _label: Top
+        properties:
+          TITLE:
+            type: (text)
+            defaultValue: The Best App Is In Town!
+            _label: Title
+          LEAD1:
+            type: (text)
+            defaultValueSet: (lipsumXL)
+            _label: Lead 1
+          LEAD2:
+            type: (text)
+            defaultValueSet: (lipsumL)
+            _label: Lead 2
+
+      ABOUT:
+        _label: About
+        properties:
+          SHOW_SECTION:
+            type: (boolean)
+            defaultValue: true
+            _label: Show section
+          TITLE:
+            type: (text)
+            defaultValue: About
+            _label: Title
+          DESCRIPTION:
+            type: (text)
+            defaultValueSet: (lipsumL)
+            _label: Description
+          LEAD1_TITLE:
+            type: (text)
+            defaultValue: Lead 1
+            _label: Lead 1 Title
+          LEAD1_DESCRIPTION:
+            type: (text)
+            defaultValueSet: (lipsumM)
+            _label: Lead 1 Description
+          LEAD2_TITLE:
+            type: (text)
+            defaultValue: Lead 2
+            _label: Lead 2 Title
+          LEAD2_DESCRIPTION:
+            type: (text)
+            defaultValueSet: (lipsumM)
+            _label: Lead 2 Description
+          LEAD3_TITLE:
+            type: (text)
+            defaultValue: Lead 3
+            _label: Lead 3 Title
+          LEAD3_DESCRIPTION:
+            type: (text)
+            defaultValueSet: (lipsumM)
+            _label: Lead 3 Description
+          LEAD4_TITLE:
+            type: (text)
+            defaultValue: Lead 4
+            _label: Lead 4 Title
+          LEAD4_DESCRIPTION:
+            type: (text)
+            defaultValueSet: (lipsumM)
+            _label: Lead 4 Description
+          LEAD5_TITLE:
+            type: (text)
+            defaultValue: Lead 5
+            _label: Lead 5 Title
+          LEAD5_DESCRIPTION:
+            type: (text)
+            defaultValueSet: (lipsumM)
+            _label: Lead 5 Description
+          LEAD6_TITLE:
+            type: (text)
+            defaultValue: Lead 6
+            _label: Lead 6 Title
+          LEAD6_DESCRIPTION:
+            type: (text)
+            defaultValueSet: (lipsumM)
+            _label: Lead 6 Description
+
+      DOWNLOADS:
+        _label: Download
+        properties:
+          SHOW_SECTION:
+            type: (boolean)
+            defaultValue: true
+            _label: Show section
+          TITLE:
+            type: (text)
+            defaultValue: Download
+            _label: Title
+          DESCRIPTION:
+            type: (text)
+            defaultValueSet: (lipsumXL)
+            _label: Description
+
+      CONTACT_US:
+        _label: Contact us
+        properties:
+          SHOW_SECTION:
+            type: (boolean)
+            defaultValue: true
+            _label: Show section
+          TITLE:
+            type: (text)
+            defaultValue: Contact Us
+            _label: Title
+          DESCRIPTION:
+            type: (text)
+            defaultValueSet: (lipsumXL)
+            _label: Description
+          E_MAIL:
+            type: (text)
+            defaultValue: e-mail@dot.com
+            _label: E-mail
+          E_MAIL_US_LABEL:
+            type: (text)
+            defaultValue: E-mail Us
+            _label: E-mail Us Label
+      FOOTER:
+        _label: Footer
+        properties:
+          COPYRIGHTS:
+            type: (text)
+            defaultValue: All Rights Reserved
+            _label: License
+          POWERED_BY:
+            type: (boolean)
+            defaultValue: true
+            _label: Powered By
+
+  COMMON:
+    _label: Common
+    sections:
+      META:
+        _label: Meta
+        properties:
+          PAGE_TITLE:
+            type: (text)
+            defaultValue: Example
+            _label: Page Title
+          PAGE_DESCRIPTION:
+            type: (text)
+            defaultValue: Lorem ipsum.
+            _label: Page Description
+          PAGE_LANGUAGE:
+            type: (choice)
+            valuesSet: (iso6391Languages)
+            defaultValue: en
+            _label: Page Language
+          FAVICON:
+            type: (image)
+            width: 32
+            height: 32
+            _label: Favicon
+            defaultFilePath: favicon.png
+          OG_IMAGE:
+            type: (image)
+            width: 1200
+            height: 630
+            defaultFilePath: og-image.png
+            _label: Open Graph Image
+          FOOTER_HTML:
+            type: (html)
+            _label: Footer HTML (i.e. plugins, tracking)
+            required: false
+
+pages:
+  INDEX:
+    filePath: index.html
+    templateFilePath: index.html

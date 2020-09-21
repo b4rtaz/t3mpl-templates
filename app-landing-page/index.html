@@ -1,0 +1,214 @@
+<!doctype html>
+<html dir="ltr" lang="{{COMMON.META.PAGE_LANGUAGE}}" >
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<title>{{COMMON.META.PAGE_TITLE}}</title>
+		<meta name="description" content="{{COMMON.META.PAGE_DESCRIPTION}}" />
+
+		<meta property="og:locale" content="{{COMMON.META.PAGE_LANGUAGE}}" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="{{COMMON.META.PAGE_TITLE}}" />
+		<meta property="og:description" content="{{COMMON.META.PAGE_DESCRIPTION}}" />
+		<meta property="og:image" content="{{$image COMMON.META.OG_IMAGE}}" >
+
+		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" />
+		<link rel="icon" href="{{$image COMMON.META.FAVICON}}" />
+
+		{{{$css 'bootstrap.min.css'}}}
+		{{{$css 'style.css'}}}
+		{{{$css 'font-awesome/css/font-awesome.css'}}}
+	</head>
+	<body>
+		<!--Header and Navbar-->	
+		<div class="container-fluid header-background fadeIn" >
+			<div class="container">
+				<nav class="navbar navbar-expand-lg navbar-light bg-light">
+					{{{$page_link $PAGES.INDEX.FILE_PATH COMMON.META.PAGE_TITLE 'navbar-brand fadeInLeft'}}}
+
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav ml-auto  fadeInRight">
+							{{#if HOME.ABOUT.SHOW_SECTION}}
+							<li class="nav-item">
+								<a class="nav-link" href="#about">{{HOME.ABOUT.TITLE}}</a>
+							</li>
+							{{/if}}
+							{{#if HOME.DOWNLOADS.SHOW_SECTION}}
+							<li class="nav-item">
+								<a class="nav-link" href="#download">{{HOME.DOWNLOADS.TITLE}}</a>
+							</li>
+							{{/if}}
+							{{#if HOME.CONTACT_US.SHOW_SECTION}}
+							<li class="nav-item">
+								<a class="nav-link " href="#contactus">{{HOME.CONTACT_US.TITLE}}</a>
+							</li>
+							{{/if}}
+						</ul>
+					</div>
+				</nav>
+			</div>
+			<div class="container">
+				<div class="jumbotron">
+					<div class="row">
+						<div class="col-md-8 fadeInLeft">
+							<h1 class="display-4">{{HOME.TOP.TITLE}}</h1>
+							<p class="lead">{{HOME.TOP.LEAD1}}</p>
+							<hr class="my-4">
+							<p>{{HOME.TOP.LEAD2}}</p>
+							<p class="lead">
+								{{#if HOME.STORIES.GOOGLE_PLAY_LINK}}
+									<a class="btn btn-light btn-lg" href="{{HOME.STORIES.GOOGLE_PLAY_LINK}}" target="_blank">
+									<i aria-hidden="true" class="fa fa-android"></i> &nbsp;{{HOME.STORIES.GOOGLE_PLAY_LABEL}}
+									</a>
+								{{/if}}
+								{{#if HOME.STORIES.IOS_STORE_LINK}}
+									<a class="btn btn-light btn-lg" href="{{HOME.STORIES.IOS_STORE_LINK}}" target="_blank">
+									<i aria-hidden="true" class="fa fa-apple"></i> &nbsp;{{HOME.STORIES.IOS_STORE_LABEL}}
+									</a>
+								{{/if}}
+							</p>
+						</div>
+						<div class=" mobile col-md-4 fadeInRight">
+							<img src="{{$image HOME.STORIES.PHONE_IMAGE}}" width="300px;" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--About-->
+		{{#if HOME.ABOUT.SHOW_SECTION}}
+		<div class="container about" id="about">
+			<div class="about-desc text-center">
+				<h1>{{HOME.ABOUT.TITLE}}</h1>
+				<p class="lead text-center">{{HOME.ABOUT.DESCRIPTION}}</p>
+			</div>
+			<div class="row">
+				<div class="col-md-4 fadeInRight">
+					<div class="about-features">
+						<div class="about-features-icon-left">
+							<i aria-hidden="true" class="fa fa-camera fa-4"></i>
+						</div>
+						<div class="about-features-details-left">
+							<h3>{{HOME.ABOUT.LEAD1_TITLE}}</h3>
+							<p class="lead">{{HOME.ABOUT.LEAD1_DESCRIPTION}}</p>
+						</div>
+					</div>
+					<div class="about-features">
+						<div class="about-features-icon-left">
+							<i aria-hidden="true" class="fa fa-bolt fa-4"></i>
+						</div>
+						<div class="about-features-details-left">
+							<h3>{{HOME.ABOUT.LEAD2_TITLE}}</h3>
+							<p class="lead">{{HOME.ABOUT.LEAD2_DESCRIPTION}}</p>
+						</div>
+					</div>
+					<div class="about-features">
+						<div class="about-features-icon-left">
+							<i aria-hidden="true" class="fa fa-file fa-4"></i>
+						</div>
+						<div class="about-features-details-left">
+							<h3>{{HOME.ABOUT.LEAD3_TITLE}}</h3>
+							<p class="lead">{{HOME.ABOUT.LEAD3_DESCRIPTION}}</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 text-center fadeInUp">
+					<img src="{{$image HOME.STORIES.PHONE_IMAGE}}" width="250px;" style="margin-top:1.5rem;" alt="">
+				</div>
+				<div class="col-md-4 fadeInLeft">
+					<div class="about-features">
+						<div class="about-features-icon-right">
+							<i aria-hidden="true" class="fa fa-globe fa-4"></i>
+						</div>
+						<div class="about-features-details-right">
+							<h3>{{HOME.ABOUT.LEAD4_TITLE}}</h3>
+							<p class="lead">{{HOME.ABOUT.LEAD4_DESCRIPTION}}</p>
+						</div>
+					</div>
+					<div class="about-features">
+						<div class="about-features-icon-right">
+							<i aria-hidden="true" class="fa fa-calendar fa-4"></i>
+						</div>
+						<div class="about-features-details-right">
+							<h3>{{HOME.ABOUT.LEAD5_TITLE}}</h3>
+							<p class="lead">{{HOME.ABOUT.LEAD5_DESCRIPTION}}</p>
+						</div>
+					</div>
+					<div class="about-features">
+						<div class="about-features-icon-right">
+							<i aria-hidden="true" class="fa fa-pencil fa-4"></i>
+						</div>
+						<div class="about-features-details-right">
+							<h3>{{HOME.ABOUT.LEAD6_TITLE}}</h3>
+							<p class="lead">{{HOME.ABOUT.LEAD6_DESCRIPTION}}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		{{/if}}
+		{{#if HOME.DOWNLOADS.SHOW_SECTION}}
+		<!--Download-->
+		<div class="download" id="download">
+			<div class="parallax-background">
+				<div class="overlay">
+					<div class="container">
+						<div class="text-center">
+							<h1 class="display-3 fadeInUp">{{HOME.DOWNLOADS.TITLE}}</h1>
+
+							<p class="lead fadeInUp">{{HOME.DOWNLOADS.DESCRIPTION}}</p>
+						</div>
+						<div class="row justify-content-center fadeInUp">
+							{{#if HOME.STORIES.GOOGLE_PLAY_LINK}}
+								<a class="btn btn-light btn-lg" href="{{HOME.STORIES.GOOGLE_PLAY_LINK}}" target="_blank">
+								<i aria-hidden="true" class="fa fa-android"></i> &nbsp;{{HOME.STORIES.GOOGLE_PLAY_LABEL}}
+								</a>
+							{{/if}}
+							{{#if HOME.STORIES.IOS_STORE_LINK}}
+								<a class="btn btn-light btn-lg" href="{{HOME.STORIES.IOS_STORE_LINK}}" target="_blank">
+								<i aria-hidden="true" class="fa fa-apple"></i> &nbsp;{{HOME.STORIES.IOS_STORE_LABEL}}
+								</a>
+							{{/if}}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		{{/if}}
+		{{#if HOME.CONTACT_US.SHOW_SECTION}}
+		<!--Contact Us-->
+		<div class="contact-us" id="contactus">
+			<div class="container">
+				<div class="text-center">
+					<h1>{{HOME.CONTACT_US.TITLE}}</h1>
+					<p class="lead">{{HOME.CONTACT_US.DESCRIPTION}}</p>
+				</div>
+				<div class="row justify-content-center fadeInDown">
+					<a class="btn contact-us-button btn-light btn-lg" href="mailto:{{HOME.CONTACT_US.E_MAIL}}">
+					<i aria-hidden="true" class="fa fa-rocket"></i> &nbsp; {{HOME.CONTACT_US.E_MAIL_US_LABEL}}
+					</a>
+				</div>
+			</div>
+		</div>
+		{{/if}}
+		<!--Footer-->
+		<div class="footer fadeInDown">
+			<div class="container">
+				<div class="text-center">
+					<p>{{{$copyright}}} {{HOME.FOOTER.COPYRIGHTS}}</p>
+					{{#if HOME.FOOTER.POWERED_BY}}
+						<p class="t3mpl">{{{$powered_by 'text-muted'}}}</p>
+					{{/if}}
+				</div>
+			</div>
+		</div>
+
+		{{#if COMMON.META.FOOTER_HTML}}
+			{{{$html COMMON.META.FOOTER_HTML}}}
+		{{/if}}
+	</body>
+</html>

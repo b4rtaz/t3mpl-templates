@@ -1,0 +1,38 @@
+					<footer>
+						<p class="footerText">
+							{{#if COMMON.FOOTER.TEMPLATE_BY}}
+								Template by <a href="https://emilbaehr.com" target="blank">Emil Baehr</a>
+								&mdash;
+							{{/if}}
+							{{#if COMMON.FOOTER.POWERED_BY}}
+								{{{$powered_by}}}
+								&mdash;
+							{{/if}}
+							{{{$copyright}}} {{COMMON.FOOTER.COPYRIGHT}}
+						</p>
+						<div class="footerIcons">
+						{{#each COMMON.SOCIAL.SOCIALS}}
+							<a href="{{URL}}">
+								<span class="fa-stack fa-1x">
+									<i class="socialIconBack fas fa-circle fa-stack-2x"></i>
+									<i class="socialIconTop fab fa-{{ICON}} fa-stack-1x"></i>
+								</span>
+							</a>
+						{{/each}}
+						</div>
+						<div class="footerLinks">
+							{{#each $PAGES.PAGE}}
+							{{#if DATA.FOOTER}}
+								{{{$page_link FILE_PATH DATA.TITLE}}}
+							{{/if}}
+							{{/each}}
+						</div>
+					</footer>
+				</div>
+			</div>
+		</div>
+		{{#if COMMON.FOOTER.POST_HTML}}
+			{{{$html COMMON.FOOTER.POST_HTML}}}
+		{{/if}}
+	</body>
+</html>

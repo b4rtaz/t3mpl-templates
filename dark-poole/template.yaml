@@ -1,0 +1,165 @@
+meta:
+  version: 1
+  name: Dark Poole
+  license: MIT
+  author: Andrew Park
+  homepageUrl: https://github.com/andrewhwanpark/dark-poole
+  filePaths:
+    - license.txt
+    - index.html
+    - page.html
+    - article.html
+    - assets/style.css
+    - assets/favicon.png
+    - header.partial
+    - footer.partial
+    - article.partial
+    - content/example.md
+
+dataContract:
+  ARTICLES:
+    _label: Articles
+    sections:
+      ARTICLES:
+        _label: Articles
+        properties:
+          ARTICLES:
+            type: (collection)
+            min: 1
+            _label: Articles
+            properties:
+              TITLE:
+                type: (text)
+                defaultValue: Title of Article
+                _label: Title
+              FILE_NAME:
+                type: (text)
+                required: false
+              CONTENT:
+                type: (markdown)
+                defaultFilePath: content/example.md
+                _label: Content
+              DATE:
+                type: (dateTime)
+                _label: Date
+                now: true
+      PAGINATION:
+        _label: Pagination
+        properties:
+          PREVIOUS:
+            type: (text)
+            defaultValue: Older
+            _label: Previous
+          NEXT:
+            type: (text)
+            defaultValue: Newer
+            _label: Next
+
+  PAGES:
+    _label: Pages
+    sections:
+      PAGES:
+        _label: Pages
+        properties:
+          PAGES:
+            type: (collection)
+            defaultOccurrences: 2
+            _label: Pages
+            properties:
+              TITLE:
+                type: (text)
+                defaultValue: Page
+                _label: Title
+              FILE_NAME:
+                type: (text)
+                required: false
+              CONTENT:
+                type: (markdown)
+                defaultFilePath: content/example.md
+                _label: Content
+              DATE:
+                type: (dateTime)
+                _label: Date
+                now: true
+
+  COMMON:
+    _label: Common
+    sections:
+      CULTURE:
+        _label: Culture
+        properties:
+          DATE_FORMAT:
+            type: (text)
+            defaultValue: DD-MM-YYYY
+            _label: Date Format
+
+      THEME:
+        _label: Theme
+        properties:
+          DARK:
+            type: (boolean)
+            defaultValue: true
+            _label: Dark Mode
+
+      META:
+        _label: Meta
+        properties:
+          LANGUAGE:
+            type: (choice)
+            valuesSet: (iso6391Languages)
+            defaultValue: en
+            _label: Language
+          TITLE:
+            type: (text)
+            defaultValue: My Page Title
+            _label: Page Title
+          DESCRIPTION:
+            type: (text)
+            defaultValue: My Page Description
+            _label: Page Description
+          FAVICON:
+            type: (image)
+            width: 32
+            height: 32
+            defaultFilePath: assets/favicon.png
+            _label: Favicon
+          PRE_HTML:
+            type: (html)
+            _label: Pre HTML
+            _description: i.e. cookie banner
+            required: false
+
+      FOOTER:
+        _label: Footer
+        properties:
+          COPYRIGHT:
+            type: (text)
+            _label: Copyright
+            defaultValue: All rights reserved
+          POWERED_BY:
+            type: (boolean)
+            defaultValue: true
+            _label: Powered By
+          POST_HTML:
+            type: (html)
+            _label: Post HTML
+            _description: i.e. plugins, tracking
+            required: false
+
+pages:
+  INDEX:
+    templateFilePath: index.html
+    filePath: index.html
+  ARTICLES:
+    templateFilePath: article.html
+    filePath: article.html
+    multiplier:
+      dataPath: ARTICLES.ARTICLES.ARTICLES
+      fileNameDataPath: FILE_NAME
+  PAGES:
+    templateFilePath: page.html
+    filePath: page.html
+    multiplier:
+      dataPath: PAGES.PAGES.PAGES
+      fileNameDataPath: FILE_NAME
+

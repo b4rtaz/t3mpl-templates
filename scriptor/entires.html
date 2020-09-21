@@ -1,0 +1,22 @@
+{{> header}}
+
+{{#each $PAGE.$SUB_PAGES}}
+	{{> article _article=this _dateAndAuthor=1 _excerpt=1 _common=../COMMON _translations=../TRANSLATIONS}}
+{{/each}}
+
+<!-- .post -->
+<nav class="pagination">
+	<h2 class="screen-reader-text">{{TRANSLATIONS.PAGINATION.TITLE}}</h2>
+	<div class="nav-links">
+		{{#if $PAGE.PREVIOUS_PAGE}}
+			{{{$page_link $PAGE.PREVIOUS_PAGE.FILE_PATH TRANSLATIONS.PAGINATION.NEWER 'newer-posts'}}}
+		{{/if}}
+		<span class="page-number">{{TRANSLATIONS.PAGINATION.PAGE}} {{$PAGE.SUB_PAGE_NUMBER}} {{TRANSLATIONS.PAGINATION.OF}} {{$PAGES.ENTRIES.length}}</span>
+		{{#if $PAGE.NEXT_PAGE}}
+			{{{$page_link $PAGE.NEXT_PAGE.FILE_PATH TRANSLATIONS.PAGINATION.OLDER 'older-posts'}}}
+		{{/if}}
+	</div>
+</nav>
+<!-- .pagination -->
+
+{{> footer}}

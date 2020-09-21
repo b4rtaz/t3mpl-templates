@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+	<title>{{COMMON.META.TITLE}}</title>
+	<description>{{COMMON.META.DESCRIPTION}}</description>
+
+	{{#if $PAGES.ENTRIES}}
+	{{#each $PAGES.ENTRIES.[0].$SUB_PAGES}}
+	<item>
+		<title>{{DATA.TITLE}}</title>
+		<link>{{../COMMON.META.BASE_URL}}{{FILE_PATH}}</link>
+		<pubDate>{{$format_dt DATA.DATE 'ddd, DD MMM YYYY HH:mm:ss ZZ'}}</pubDate>
+		<guid>{{../COMMON.META.BASE_URL}}{{FILE_PATH}}</guid>
+	</item>
+	{{/each}}
+	{{/if}}
+</channel>
+</rss>

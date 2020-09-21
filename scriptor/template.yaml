@@ -1,0 +1,211 @@
+meta:
+  version: 1
+  name: Scriptor
+  license: MIT
+  author: JustGoodThemes
+  exportable: true
+  homepageUrl: https://github.com/JustGoodThemes/Scriptor-Jekyll-Theme
+  filePaths:
+    - license.txt
+    - entires.html
+    - page.html
+    - article.html
+    - assets/favicon.png
+    - assets/css/style.css
+    - assets/fonts/fontawesome.svg
+    - assets/fonts/fontawesome.ttf
+    - assets/fonts/fontawesome.woff
+    - assets/js/custom.js
+    - assets/road.jpg
+    - content/page.md
+    - header.partial
+    - footer.partial
+    - article.partial
+    - feed.xml
+
+dataContract:
+
+  ARTICLES:
+    sections:
+      ARTICLES:
+        properties:
+          ARTICLES:
+            type: (collection)
+            defaultOccurrences: 4
+            min: 1
+            properties:
+              TITLE:
+                type: (text)
+                defaultValue: Article
+              FILE_PATH:
+                type: (text)
+                required: false
+              THUMBNAIL:
+                type: (image)
+                defaultFilePath: assets/road.jpg
+              CONTENT:
+                type: (markdown)
+                defaultFilePath: content/page.md
+              DATE:
+                type: (dateTime)
+                now: true
+              AUTHOR:
+                type: (text)
+                defaultValue: John Wrap
+  TRANSLATIONS:
+    sections:
+      PAGINATION:
+        properties:
+          TITLE:
+            type: (text)
+            defaultValue: Posts navigation
+          NEWER:
+            type: (text)
+            defaultValue: Newer posts
+          OLDER:
+            type: (text)
+            defaultValue: Older posts
+          PAGE:
+            type: (text)
+            defaultValue: Page
+          OF:
+            type: (text)
+            defaultValue: of
+
+      MENU:
+        properties:
+          TITLE:
+            type: (text)
+            defaultValue: Main navigation
+          CLOSE_MENU:
+            type: (text)
+            defaultValue: Close Menu
+          OPEN_MENU:
+            type: (text)
+            defaultValue: Open Menu
+
+      ARTICLE:
+        properties:
+          AUTHOR:
+            type: (text)
+            defaultValue: By
+
+      FOOTER:
+        properties:
+          BACK_TO_TOP:
+            type: (text)
+            defaultValue: Back to the top
+
+  PAGES:
+    sections:
+      PAGES:
+        properties:
+          PAGES:
+            type: (collection)
+            defaultOccurrences: 3
+            properties:
+              TITLE:
+                type: (text)
+                defaultValue: Page
+              FILE_PATH:
+                type: (text)
+                required: false
+              THUMBNAIL:
+                type: (image)
+                defaultFilePath: assets/road.jpg
+              CONTENT:
+                type: (markdown)
+                defaultFilePath: content/page.md
+
+  COMMON:
+    sections:
+      CULTURE:
+        properties:
+          DATE_FORMAT:
+            type: (text)
+            defaultValue: YYYY-MM-DD
+
+      META:
+        properties:
+          BASE_URL:
+            type: (text)
+            _label: Site base URL
+            _description: i.e. https://example.com/
+          LANGUAGE:
+            type: (choice)
+            valuesSet: (iso6391Languages)
+            defaultValue: en
+          DIRECTION:
+            type: (choice)
+            valuesSet: (direction)
+            defaultValue: auto
+          TITLE:
+            type: (text)
+            defaultValue: My Page Title
+          DESCRIPTION:
+            type: (text)
+            defaultValue: My Page Description
+          FAVICON:
+            type: (image)
+            width: 32
+            height: 32
+            defaultFilePath: assets/favicon.png
+          PRE_HTML:
+            type: (html)
+            _label: Pre HTML
+            _description: i.e. cookie banner
+            required: false
+      FOOTER:
+        properties:
+          COPYRIGHT:
+            type: (text)
+            defaultValue: All rights reserved
+          POWERED_BY:
+            type: (boolean)
+            defaultValue: true
+          POST_HTML:
+            type: (html)
+            _label: Post HTML
+            _description: i.e. plugins, tracking
+            required: false
+          SOCIALS:
+            type: (collection)
+            defaultOccurrences: 2
+            properties:
+              NAME:
+                type: (text)
+                defaultValue: Twitter
+              URL:
+                type: (text)
+                defaultValue: https://github.com/JustGoodThemes/Scriptor-Jekyll-Theme
+              ICON:
+                type: (choice)
+                defaultValue: twitter
+                values: [twitter, github, instagram, linkedin, facebook, youtube, rss, envelope, pinterest, stack-overflow, dev, vimeo, quora, gitlab, product-hunt, medium, codepen, reddit, dribbble]
+
+pages:
+  ENTRIES:
+    filePath: entires.html
+    templateFilePath: entires.html
+    divider:
+      divisor: 3
+      pageName: ARTICLE
+      firstFilePath: index.html
+
+  PAGE:
+    filePath: page.html
+    templateFilePath: page.html
+    multiplier:
+      dataPath: PAGES.PAGES.PAGES
+      fileNameDataPath: FILE_PATH
+
+  ARTICLE:
+    filePath: article.html
+    templateFilePath: article.html
+    multiplier:
+      dataPath: ARTICLES.ARTICLES.ARTICLES
+      fileNameDataPath: FILE_PATH
+
+  FEED:
+    filePath: feed.xml
+    templateFilePath: feed.xml

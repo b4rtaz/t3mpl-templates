@@ -1,0 +1,79 @@
+{{> header}}
+<header class="app__header container">
+	<div class="app__logo-wrapper"> <img class="app__logo" src="{{{$image APP.APP.ICON}}}" alt="{{APP.APP.APP_NAME}}"></div>
+	<div class="app__infos">
+		<h1 class="app__name">{{APP.APP.APP_NAME}}</h1>
+		<p class="app__description">{{APP.APP.TAGLINE}}</p>
+		<div class="app__buttons app__buttons--desktop">
+			{{#if APP.APP.GOOGLE_PLAY_URL}}
+			<a href="{{APP.APP.GOOGLE_PLAY_URL}}" class="app__button-play" target="_blank" title="{{APP.APP.GOOGLE_PLAY_TITLE}}">
+				<img src="{{{$image APP.APP.GOOGLE_PLAY_IMAGE}}}" alt="{{APP.APP.GOOGLE_PLAY_TITLE}}">
+			</a>
+			{{/if}}
+			{{#if APP.APP.IOS_URL}}
+			<a href="{{APP.APP.IOS_URL}}" class="app__button-ios" target="_blank" title="{{APP.APP.IOS_TITLE}}">
+				<img src="{{{$image APP.APP.IOS_IMAGE}}}" alt="{{APP.APP.IOS_TITLE}}">
+			</a>
+			{{/if}}
+			{{#if APP.APP.WEB_APP_URL}}
+			<a href="{{APP.APP.WEB_APP_URL}}" class="app__button-web" target="_blank" title="{{APP.APP.WEB_APP_TITLE}}">
+				<img src="{{{$image APP.APP.WEB_APP_IMAGE}}}" alt="{{APP.APP.WEB_APP_TITLE}}">
+			</a>
+			{{/if}}
+		</div>
+	</div>
+</header>
+<div class="app__buttons app__buttons--mobile container">
+	{{#if APP.APP.GOOGLE_PLAY_URL}}
+	<a href="{{APP.APP.GOOGLE_PLAY_URL}}" class="app__button-play" target="_blank" title="{{APP.APP.GOOGLE_PLAY_TITLE}}">
+		<img src="{{{$image APP.APP.GOOGLE_PLAY_IMAGE}}}" alt="{{APP.APP.GOOGLE_PLAY_TITLE}}">
+	</a>
+	{{/if}}
+	{{#if APP.APP.IOS_URL}}
+	<a href="{{APP.APP.IOS_URL}}" class="app__button-ios" target="_blank" title="{{APP.APP.IOS_TITLE}}">
+		<img src="{{{$image APP.APP.IOS_IMAGE}}}" alt="{{APP.APP.IOS_TITLE}}">
+	</a>
+	{{/if}}
+	{{#if APP.APP.WEB_APP_URL}}
+	<a href="{{APP.APP.WEB_APP_URL}}" class="app__button-web" target="_blank" title="{{APP.APP.WEB_APP_TITLE}}">
+		<img src="{{{$image APP.APP.WEB_APP_IMAGE}}}" alt="{{APP.APP.WEB_APP_TITLE}}">
+	</a>
+	{{/if}}
+</div>
+{{#if APP.SCREENSHOTS.SHOW}}
+<section class="app__screenshots app__section">
+	<div class="container">
+		<h2 class="app__section-title">{{APP.SCREENSHOTS.TITLE}}</h2>
+	</div>
+	<div class="app__screenshots-wrapper container-desktop">
+		<div class="app__screenshots-list">
+		{{#each APP.SCREENSHOTS.IMAGES}}
+			<a href="{{{$image IMAGE}}}" class="lightbox">
+				<img src="{{{$image IMAGE}}}" class="app__screenshot" alt="" />
+			</a>
+		{{/each}}
+		</div>
+	</div>
+</section>
+{{/if}}
+{{#if APP.DESCRIPTION.SHOW}}
+<section class="app__fulldescription app__section container">
+	<h2 class="app__section-title">{{APP.DESCRIPTION.TITLE}}</h2>
+	<div class="app__fulldescription-content">
+		{{{$markdown APP.DESCRIPTION.TEXT}}}
+	</div>
+</section>
+{{/if}}
+{{#if APP.FEATURED_IN.SHOW}}
+<section class="app__featured app__section container">
+	<h2 class="app__section-title">{{APP.FEATURED_IN.TITLE}}</h2>
+	<div class="app__featured-content">
+		{{#each APP.FEATURED_IN.FEATURES}}
+		<a href="{{URL}}" target="_blank" class="app__featured-company"> 
+			<img src="{{{$image IMAGE}}}" class="app__featured-image">
+		</a> 
+		{{/each}}
+	</div>
+</section>
+{{/if}}
+{{> footer}}

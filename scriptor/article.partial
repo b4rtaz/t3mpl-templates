@@ -1,0 +1,32 @@
+<article class="post">
+	<header class="post-header">
+		{{#if _dateAndAuthor}}
+		<time class="post-date" datetime="{{_article.DATA.DATE}}">
+			{{$format_dt _article.DATA.DATE _common.CULTURE.DATE_FORMAT}}
+		</time>
+		{{/if}}
+
+		<h2 class="post-title">
+			{{{$page_link _article.FILE_PATH _article.DATA.TITLE}}}
+		</h2>
+
+		{{#if _dateAndAuthor}}
+		<div class="post-meta">
+			{{_translations.ARTICLE.AUTHOR}} <span class="post-author">{{_article.DATA.AUTHOR}}</span>
+		</div>
+		{{/if}}
+
+		{{#if _article.DATA.THUMBNAIL}}
+		<figure class="post-thumbnail image-card width-wide">
+			<img src="{{{$image _article.DATA.THUMBNAIL}}}" alt="" />
+		</figure>
+		{{/if}}
+	</header>
+	<div class="post-content">
+		{{#if _excerpt}}
+			{{{$markdown_excerpt _article.DATA.CONTENT}}}
+		{{else}}
+			{{{$markdown _article.DATA.CONTENT}}}
+		{{/if}}
+	</div>
+</article>

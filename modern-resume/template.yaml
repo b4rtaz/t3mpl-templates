@@ -1,0 +1,283 @@
+meta:
+  version: 1
+  name: Modern Resume
+  license: MIT
+  author: James Grant
+  exportable: true
+  homepageUrl: https://github.com/sproogen/modern-resume-theme
+  donationUrl: https://www.buymeacoffee.com/vJ6HfLu
+  filePaths:
+    - license.txt
+    - index.html
+    - assets/style.css
+    - assets/favicon.png
+    - assets/profile.jpg
+    - content/aboutme.md
+    - content/project.md
+    - content/experience.md
+    - content/education.md
+    - content/moreaboutme.md
+
+dataContract:
+  RESUME:
+    _label: Resume
+    sections:
+      BASIC:
+        _label: Basic
+        _panel: first
+        properties:
+          NAME:
+            type: (text)
+            _label: Name
+            defaultValue: Brett Harris
+          PROFESSION:
+            type: (text)
+            _label: Profession
+            defaultValue: Senior Network System Administrator
+          EMAIL:
+            type: (text)
+            required: false
+            _label: E-mail
+            defaultValue: brett.h@email.co.uk
+          EMAIL_LABEL:
+            type: (text)
+            _label: E-mail Label
+            defaultValue: 'E-mail:'
+          WEBSITE_URL:
+            type: (text)
+            required: false
+            _label: Website URL
+            defaultValue: https://www.github.com/sproogen/resume-theme
+          WEBSITE_URL_LABEL:
+            type: (text)
+            _label: Website URL Label
+            defaultValue: github.com/sproogen/resume-theme
+          WEBSITE_LABEL:
+            type: (text)
+            _label: Website Label
+            defaultValue: 'Web:'
+
+      SOCIAL:
+        _label: Social
+        _panel: first
+        properties:
+          SOCIALS:
+            type: (collection)
+            defaultOccurrences: 4
+            min: 1
+            properties:
+              ICON:
+                type: (choice)
+                values: [accessible-icon, accusoft, acquisitions-incorporated, adn, adobe, adversal, affiliatetheme, airbnb, algolia, alipay, amazon, amazon-pay, amilia, android, angellist, angrycreative, angular, app-store, app-store-ios, apper, apple, apple-pay, artstation, asymmetrik, atlassian, audible, autoprefixer, avianex, aviato, aws, bandcamp, battle-net, behance, behance-square, bimobject, bitbucket, bitcoin, bity, black-tie, blackberry, blogger, blogger-b, bluetooth, bluetooth-b, bootstrap, btc, buffer, buromobelexperte, buy-n-large, buysellads, canadian-maple-leaf, cc-amazon-pay, cc-amex, cc-apple-pay, cc-diners-club, cc-discover, cc-jcb, cc-mastercard, cc-paypal, cc-stripe, cc-visa, centercode, centos, chrome, chromecast, cloudscale, cloudsmith, cloudversify, codepen, codiepie, confluence, connectdevelop, contao, cotton-bureau, cpanel, creative-commons, creative-commons-by, creative-commons-nc, creative-commons-nc-eu, creative-commons-nc-jp, creative-commons-nd, creative-commons-pd, creative-commons-pd-alt, creative-commons-remix, creative-commons-sa, creative-commons-sampling, creative-commons-sampling-plus, creative-commons-share, creative-commons-zero, critical-role, css3, css3-alt, cuttlefish, d-and-d, d-and-d-beyond, dailymotion, dashcube, deezer, delicious, deploydog, deskpro, dev, deviantart, dhl, diaspora, digg, digital-ocean, discord, discourse, dochub, docker, draft2digital, dribbble, dribbble-square, dropbox, drupal, dyalog, earlybirds, ebay, edge, edge-legacy, elementor, ello, ember, empire, envira, erlang, ethereum, etsy, evernote, expeditedssl, facebook, facebook-f, facebook-messenger, facebook-square, fantasy-flight-games, fedex, fedora, figma, firefox, firefox-browser, first-order, first-order-alt, firstdraft, flickr, flipboard, fly, font-awesome, font-awesome-alt, font-awesome-flag, fonticons, fonticons-fi, fort-awesome, fort-awesome-alt, forumbee, foursquare, free-code-camp, freebsd, fulcrum, galactic-republic, galactic-senate, get-pocket, gg, gg-circle, git, git-alt, git-square, github, github-alt, github-square, gitkraken, gitlab, gitter, glide, glide-g, gofore, goodreads, goodreads-g, google, google-drive, google-pay, google-play, google-plus, google-plus-g, google-plus-square, google-wallet, gratipay, grav, gripfire, grunt, gulp, hacker-news, hacker-news-square, hackerrank, hips, hire-a-helper, hooli, hornbill, hotjar, houzz, html5, hubspot, ideal, imdb, instagram, instagram-square, intercom, internet-explorer, invision, ioxhost, itch-io, itunes, itunes-note, java, jedi-order, jenkins, jira, joget, joomla, js, js-square, jsfiddle, kaggle, keybase, keycdn, kickstarter, kickstarter-k, korvue, laravel, lastfm, lastfm-square, leanpub, less, line, linkedin, linkedin-in, linode, linux, lyft, magento, mailchimp, mandalorian, markdown, mastodon, maxcdn, mdb, medapps, medium, medium-m, medrt, meetup, megaport, mendeley, microblog, microsoft, mix, mixcloud, mixer, mizuni, modx, monero, napster, neos, nimblr, node, node-js, npm, ns8, nutritionix, odnoklassniki, odnoklassniki-square, old-republic, opencart, openid, opera, optin-monster, orcid, osi, page4, pagelines, palfed, patreon, paypal, penny-arcade, periscope, phabricator, phoenix-framework, phoenix-squadron, php, pied-piper, pied-piper-alt, pied-piper-hat, pied-piper-pp, pied-piper-square, pinterest, pinterest-p, pinterest-square, playstation, product-hunt, pushed, python, qq, quinscape, quora, r-project, raspberry-pi, ravelry, react, reacteurope, readme, rebel, red-river, reddit, reddit-alien, reddit-square, redhat, renren, replyd, researchgate, resolving, rev, rocketchat, rockrms, rust, safari, salesforce, sass, schlix, scribd, searchengin, sellcast, sellsy, servicestack, shirtsinbulk, shopify, shopware, simplybuilt, sistrix, sith, sketch, skyatlas, skype, slack, slack-hash, slideshare, snapchat, snapchat-ghost, snapchat-square, soundcloud, sourcetree, speakap, speaker-deck, spotify, squarespace, stack-exchange, stack-overflow, stackpath, staylinked, steam, steam-square, steam-symbol, sticker-mule, strava, stripe, stripe-s, studiovinari, stumbleupon, stumbleupon-circle, superpowers, supple, suse, swift, symfony, teamspeak, telegram, telegram-plane, tencent-weibo, the-red-yeti, themeco, themeisle, think-peaks, tiktok, trade-federation, trello, tripadvisor, tumblr, tumblr-square, twitch, twitter, twitter-square, typo3, uber, ubuntu, uikit, umbraco, uniregistry, unity, unsplash, untappd, ups, usb, usps, ussunnah, vaadin, viacoin, viadeo, viadeo-square, viber, vimeo, vimeo-square, vimeo-v, vine, vk, vnv, vuejs, waze, weebly, weibo, weixin, whatsapp, whatsapp-square, whmcs, wikipedia-w, windows, wix, wizards-of-the-coast, wolf-pack-battalion, wordpress, wordpress-simple, wpbeginner, wpexplorer, wpforms, wpressr, xbox, xing, xing-square, y-combinator, yahoo, yammer, yandex, yandex-international, yarn, yelp, yoast, youtube, youtube-square, zhihu]
+                defaultValue: twitter
+              URL:
+                type: (text)
+                required: false
+                defaultValue: https://github.com/sproogen/modern-resume-theme
+              TITLE:
+                type: (text)
+                defaultValue: My GitHub
+
+      ABOUT_ME:
+        _label: About me
+        properties:
+          SHOW:
+            type: (boolean)
+            _label: Show
+            defaultValue: true
+          TITLE:
+            type: (text)
+            _label: Title
+            defaultValue: About Me
+          PHOTO:
+            _label: Photo
+            type: (image)
+            defaultFilePath: assets/profile.jpg
+            width: 400
+            height: 400
+          DESCRIPTION:
+            type: (markdown)
+            _label: Description
+            defaultFilePath: content/aboutme.md
+
+      PROJECTS:
+        _label: Projects
+        properties:
+          SHOW:
+            type: (boolean)
+            _label: Show
+            defaultValue: true
+          TITLE:
+            type: (text)
+            _label: Title
+            defaultValue: Projects
+          PROJECTS:
+            type: (collection)
+            _label: Projects
+            defaultOccurrences: 1
+            properties:
+              TITLE:
+                type: (text)
+                _label: Title
+                defaultValue: Super awesome project
+              WEBSITE_URL:
+                type: (text)
+                _label: Website URL
+                required: false
+                defaultValue: http://github.com/sproogen
+              WEBSITE_LABEL:
+                type: (text)
+                _label: Website Label
+                defaultValue: github.com/sproogen
+              DESCRIPTION:
+                type: (markdown)
+                _label: Description
+                defaultFilePath: content/project.md
+
+      EXPERIENCE:
+        _label: Experience
+        properties:
+          SHOW:
+            type: (boolean)
+            _label: Show
+            defaultValue: true
+          TITLE:
+            type: (text)
+            _label: Title
+            defaultValue: Experience
+          PLACES:
+            type: (collection)
+            _label: Places
+            defaultOccurrences: 1
+            properties:
+              TITLE:
+                type: (text)
+                _label: Title
+                defaultValue: The Boring Company
+              COMPANY_URL:
+                type: (text)
+                _label: Company URL
+                required: false
+                defaultValue: https://www.boringcompany.com/
+              COMPANY_URL_LABEL:
+                type: (text)
+                _label: Company URL Label
+                defaultValue: boringcompany.com
+              ROLE:
+                type: (text)
+                _label: Role
+                defaultValue: Senior Network System Administrator
+              WHEN:
+                type: (text)
+                _label: When
+                defaultValue: November 2017 - Present
+              DESCRIPTION:
+                type: (markdown)
+                _label: Description
+                defaultFilePath: content/experience.md
+
+      EDUCATION:
+        _label: Education
+        properties:
+          SHOW:
+            type: (boolean)
+            _label: Show
+            defaultValue: true
+          TITLE:
+            type: (text)
+            _label: Title
+            defaultValue: Education
+          PLACES:
+            type: (collection)
+            _label: Places
+            defaultOccurrences: 1
+            properties:
+              TITLE:
+                type: (text)
+                _label: Title
+                defaultValue: Harvard University
+              DEGREE:
+                type: (text)
+                _label: Degree
+                defaultValue: BSc Computer Science
+              WHEN:
+                type: (text)
+                _label: When
+                defaultValue: 2010 - 2013
+              DESCRIPTION:
+                type: (markdown)
+                _label: Description
+                defaultFilePath: content/education.md
+
+      MORE_ABOUT_ME:
+        _label: More About Me
+        properties:
+          SHOW:
+            type: (boolean)
+            _label: Show
+            defaultValue: true
+          TITLE:
+            type: (text)
+            _label: Title
+            defaultValue: A Little More About Me
+          DESCRIPTION:
+            type: (markdown)
+            _label: Description
+            defaultFilePath: content/moreaboutme.md
+  COMMON:
+    _label: Common
+    sections:
+      THEME:
+        _label: Theme
+        properties:
+          DARK:
+            type: (boolean)
+            _label: Dark
+            defaultValue: false
+      META:
+        _label: Meta
+        properties:
+          LANGUAGE:
+            type: (choice)
+            valuesSet: (iso6391Languages)
+            defaultValue: en
+            _label: Language
+          TITLE:
+            type: (text)
+            defaultValue: My Page Title
+            _label: Page Title
+          DESCRIPTION:
+            type: (text)
+            defaultValue: My Page Description
+            _label: Page Description
+          FAVICON:
+            type: (image)
+            width: 32
+            height: 32
+            defaultFilePath: assets/favicon.png
+            _label: Favicon
+          PRE_HTML:
+            type: (html)
+            _label: Pre HTML
+            _description: i.e. cookie banner
+            required: false
+      FOOTER:
+        _label: Footer
+        properties:
+          COPYRIGHT:
+            type: (text)
+            _label: Copyright
+            defaultValue: All rights reserved.
+          POWERED_BY:
+            type: (boolean)
+            defaultValue: true
+            _label: Powered By
+          POST_HTML:
+            type: (html)
+            _label: Post HTML
+            _description: i.e. plugins, tracking
+            required: false
+pages:
+  INDEX:
+    filePath: index.html
+    templateFilePath: index.html

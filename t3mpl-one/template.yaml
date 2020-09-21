@@ -1,0 +1,176 @@
+meta:
+  version: 2
+  name: T3MPL One
+  license: MIT
+  author: Bartlomiej Tadych
+  homepageUrl: http://n4no.com/
+  donationUrl: http://t3mpl.n4no.com/donate.html
+  exportable: true
+  filePaths:
+    - license.txt
+    - index.html
+    - page.html
+    - header.partial
+    - footer.partial
+    - assets/style.css
+    - assets/favicon.png
+    - assets/og-image.png
+    - assets/app.png
+    - assets/theme-preview.png
+    - content/markdown/landing-text.md
+    - content/markdown/item-text.md
+    - content/markdown/page-text.md
+
+dataContract:
+
+  ITEMS:
+    sections:
+      ITEMS:
+        properties:
+          ITEMS:
+            type: (collection)
+            defaultOccurrences: 8
+            properties:
+              TITLE:
+                type: (text)
+                defaultValue: T3MPL One
+              PREVIEW:
+                type: (image)
+                defaultFilePath: assets/theme-preview.png
+                width: 440
+                height: 520
+              ACTION_URL:
+                type: (text)
+                defaultValue: http://n4no.com/
+              DESCRIPTION:
+                type: (markdown)
+                defaultFilePath: content/markdown/item-text.md
+
+      TRANSLATIONS:
+        properties:
+          TITLE:
+            type: (text)
+            defaultValue: Items
+          ACTION:
+            type: (text)
+            defaultValue: 'Press me'
+
+  LANDING:
+    sections:
+      LANDING:
+        properties:
+          TEXT:
+            type: (markdown)
+            defaultFilePath: content/markdown/landing-text.md
+          PREVIEW:
+            type: (image)
+            defaultFilePath: assets/app.png
+            width: 2100
+            height: 844
+
+  PAGES:
+    sections:
+      PAGES:
+        properties:
+          PAGES:
+            type: (collection)
+            defaultOccurrences: 1
+            properties:
+              TITLE:
+                type: (text)
+                defaultValue: Page
+              FILE_NAME:
+                type: (text)
+                required: false
+              CONTENT:
+                type: (markdown)
+                defaultFilePath: content/markdown/page-text.md
+              HEADER:
+                type: (boolean)
+                defaultValue: true
+
+  COMMON:
+    _label: Common
+    sections:
+      META:
+        _label: Meta
+        properties:
+          LANGUAGE:
+            type: (choice)
+            valuesSet: (iso6391Languages)
+            defaultValue: en
+          DIRECTION:
+            type: (choice)
+            valuesSet: (direction)
+            defaultValue: auto
+          TITLE:
+            type: (text)
+            defaultValue: My Page Title
+            _label: Page Title
+          DESCRIPTION:
+            type: (text)
+            defaultValue: My Page Description
+            _label: Page Description
+          FAVICON:
+            type: (image)
+            width: 32
+            height: 32
+            defaultFilePath: assets/favicon.png
+          OG_IMAGE:
+            type: (image)
+            width: 1200
+            height: 630
+            defaultFilePath: assets/og-image.png
+            _label: Open Graph Image
+          PRE_HTML:
+            type: (html)
+            _label: Pre HTML
+            _description: i.e. cookie banner
+            required: false
+
+      HEADER:
+        properties:
+          SITE_NAME:
+            type: (text)
+            defaultValue: T3MPL One
+          LINKS:
+            type: (collection)
+            defaultOccurrences: 2
+            properties:
+              TITLE:
+                type: (text)
+                defaultValue: GitHub
+              URL:
+                type: (text)
+                defaultValue: http://n4no.com/
+              OPEN_IN_NEW_TAB:
+                type: (boolean)
+                defaultValue: true
+      FOOTER:
+        properties:
+          COPYRIGHT:
+            type: (text)
+            defaultValue: All rights reserved.
+          POWERED_BY:
+            type: (boolean)
+            defaultValue: true
+          TEMPLATE_BY:
+            type: (boolean)
+            defaultValue: true
+          POST_HTML:
+            type: (html)
+            _label: Post HTML
+            _description: i.e. plugins, tracking
+            required: false
+
+pages:
+  INDEX:
+    filePath: index.html
+    templateFilePath: index.html
+
+  PAGE:
+    filePath: page.html
+    templateFilePath: page.html
+    multiplier:
+      dataPath: PAGES.PAGES.PAGES
+      fileNameDataPath: FILE_NAME

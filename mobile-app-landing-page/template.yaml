@@ -1,0 +1,227 @@
+meta:
+  version: 1
+  name: Mobile App Landing Page
+  license: MIT
+  author: Sandoche Adittane
+  exportable: true
+  homepageUrl: https://github.com/sandoche/Mobile-app-landingpage-template
+  donationUrl: https://www.paypal.me/kanbanote
+  filePaths:
+    - license.txt
+    - index.html
+    - page.html
+    - header.partial
+    - footer.partial
+    - assets/style.css
+    - assets/tobi.css
+    - assets/tobi.min.js
+    - assets/favicon.png
+    - assets/og-image.png
+    - assets/ios-mask-border-128.svg
+    - assets/ios-mask.svg
+    - assets/icon.png
+    - assets/google-play-badge.png
+    - assets/ios-badge.svg
+    - assets/pwa-badge.png
+    - assets/producthunt.png
+    - assets/screenshot.png
+    - content/markdown/description.md
+    - content/markdown/privacy.md
+
+dataContract:
+
+  APP:
+    sections:
+      APP:
+        properties:
+          APP_NAME:
+            type: (text)
+            defaultValue: Mobile App Name
+          TAGLINE:
+            type: (text)
+            defaultValue: A super tagline for the mobile app
+          ICON:
+            type: (image)
+            width: 1024
+            height: 1024
+            defaultFilePath: assets/icon.png
+
+          GOOGLE_PLAY_IMAGE:
+            type: (image)
+            defaultFilePath: assets/google-play-badge.png
+          GOOGLE_PLAY_URL:
+            type: (text)
+            required: false
+            defaultValue: https://play.google.com/store
+          GOOGLE_PLAY_TITLE:
+            type: (text)
+            defaultValue: Get on Google Play
+
+          IOS_IMAGE:
+            type: (image)
+            defaultFilePath: assets/ios-badge.svg
+          IOS_URL:
+            type: (text)
+            required: false
+            defaultValue: https://www.apple.com/ios/app-store/
+          IOS_TITLE:
+            type: (text)
+            defaultValue: Get on Appstore
+
+          WEB_APP_IMAGE:
+            type: (image)
+            defaultFilePath: assets/pwa-badge.png
+          WEB_APP_URL:
+            type: (text)
+            required: false
+            defaultValue: https://github.com/
+          WEB_APP_TITLE:
+            type: (text)
+            defaultValue: Go to website
+
+      SCREENSHOTS:
+        properties:
+          SHOW:
+            type: (boolean)
+            defaultValue: true
+          TITLE:
+            type: (text)
+            defaultValue: Screenshots
+          IMAGES:
+            type: (collection)
+            defaultOccurrences: 4
+            properties:
+              IMAGE:
+                type: (image)
+                defaultFilePath: assets/screenshot.png
+
+      DESCRIPTION:
+        properties:
+          SHOW:
+            type: (boolean)
+            defaultValue: true
+          TITLE:
+            type: (text)
+            defaultValue: Description
+          TEXT:
+            type: (markdown)
+            defaultFilePath: content/markdown/description.md
+
+      FEATURED_IN:
+        properties:
+          SHOW:
+            type: (boolean)
+            defaultValue: true
+          TITLE:
+            type: (text)
+            defaultValue: Featured in
+          FEATURES:
+            type: (collection)
+            defaultOccurrences: 2
+            properties:
+              IMAGE:
+                type: (image)
+                width: 596
+                height: 360
+                defaultFilePath: assets/producthunt.png
+              URL:
+                type: (text)
+                defaultValue: https://github.com/
+
+  PAGES:
+    sections:
+      PAGES:
+        properties:
+          PAGES:
+            type: (collection)
+            defaultOccurrences: 1
+            properties:
+              TITLE:
+                type: (text)
+                defaultValue: Privacy
+              FILE_NAME:
+                type: (text)
+                required: false
+              CONTENT:
+                type: (markdown)
+                defaultFilePath: content/markdown/privacy.md
+
+  COMMON:
+    _label: Common
+    sections:
+      META:
+        _label: Meta
+        properties:
+          LANGUAGE:
+            type: (choice)
+            valuesSet: (iso6391Languages)
+            defaultValue: en
+          DIRECTION:
+            type: (choice)
+            valuesSet: (direction)
+            defaultValue: auto
+          TITLE:
+            type: (text)
+            defaultValue: My Page Title
+            _label: Page Title
+          DESCRIPTION:
+            type: (text)
+            defaultValue: My Page Description
+            _label: Page Description
+          FAVICON:
+            type: (image)
+            width: 32
+            height: 32
+            defaultFilePath: assets/favicon.png
+          OG_IMAGE:
+            type: (image)
+            width: 1200
+            height: 630
+            defaultFilePath: assets/og-image.png
+            _label: Open Graph Image
+          PRE_HTML:
+            type: (html)
+            _label: Pre HTML
+            _description: i.e. cookie banner
+            required: false
+      FOOTER:
+        properties:
+          COPYRIGHT:
+            type: (text)
+            defaultValue: All rights reserved
+          TEMPLATE_BY:
+            type: (boolean)
+            defaultValue: true
+          POWERED_BY:
+            type: (boolean)
+            defaultValue: true
+          POST_HTML:
+            type: (html)
+            _label: Post HTML
+            _description: i.e. plugins, tracking
+            required: false
+          LINKS:
+            type: (collection)
+            defaultOccurrences: 2
+            properties:
+              TITLE:
+                type: (text)
+                defaultValue: GitHub
+              URL:
+                type: (text)
+                defaultValue: http://n4no.com/
+              OPEN_IN_NEW_TAB:
+                type: (boolean)
+                defaultValue: true
+
+pages:
+  INDEX:
+    filePath: index.html
+    templateFilePath: index.html
+
+  PAGE:
+    filePath: page.html
+    templateFilePath: page.html
+    multiplier:
+      dataPath: PAGES.PAGES.PAGES
+      fileNameDataPath: FILE_NAME

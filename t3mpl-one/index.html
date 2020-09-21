@@ -1,0 +1,28 @@
+{{> header}}
+
+<section class="intro">
+	{{{$markdown LANDING.LANDING.TEXT}}}
+
+	<img src="{{{$image LANDING.LANDING.PREVIEW}}}" class="app" alt="{{COMMON.HEADER.SITE_NAME}}" />
+</section>
+
+<div class="items">
+
+	<section class="items">
+		<h4>{{ITEMS.TRANSLATIONS.TITLE}}</h4>
+
+		<ul>
+			{{#each ITEMS.ITEMS.ITEMS}}
+			<li>
+				<img src="{{{$image PREVIEW}}}" width="220" height="260" alt="" />
+				<h5>{{TITLE}}</h5>
+				<a href="{{ACTION_URL}}" class="edit">{{../ITEMS.TRANSLATIONS.ACTION}}</a>
+				{{{$markdown DESCRIPTION}}}
+			</li>
+			{{/each}}
+		</ul>
+
+	</section>
+</div>
+
+{{> footer}}

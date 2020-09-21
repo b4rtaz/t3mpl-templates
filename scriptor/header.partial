@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html dir="{{COMMON.META.DIRECTION}}" lang="{{COMMON.META.LANGUAGE}}">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>{{#if _title}}{{_title}} - {{/if}}{{COMMON.META.TITLE}}</title>
+		<meta name="description" content="{{COMMON.META.DESCRIPTION}}" />
+		<link rel="icon" href="{{$image COMMON.META.FAVICON}}" />
+		<link rel="alternate" type="application/rss+xml" title="{{COMMON.META.TITLE}}" href="feed.xml" />
+
+		<link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i%7CNoto+Serif:400,400i,700,700i&display=swap" rel="stylesheet">
+		{{{$css 'assets/css/style.css'}}}
+
+		{{#if COMMON.META.PRE_HTML}}
+			{{{$html COMMON.META.PRE_HTML}}}
+		{{/if}}
+	</head>
+	<body>
+		<div id="page" class="site">
+			<div class="inner">
+				<header class="site-header">
+					<h1 class="site-title">
+						{{#if $PAGES.ENTRIES}}
+							{{{$page_link $PAGES.ENTRIES.[0].FILE_PATH COMMON.META.TITLE 'logo-text'}}}
+						{{else}}
+							<a class="logo-text">{{COMMON.META.TITLE}}</a>
+						{{/if}}
+					</h1>
+					<nav class="site-navigation">
+						<div class="site-navigation-wrap">
+							<h2 class="screen-reader-text">{{TRANSLATIONS.MENU.TITLE}}</h2>
+							<ul class="menu">
+								{{#each $PAGES.PAGE}}
+								<li class="menu-item nav-current">
+									{{{$page_link FILE_PATH DATA.TITLE}}}
+									<!--<a class="nav-current" href="/">{{TITLE}}</a>-->
+								</li>
+								{{/each}}
+							</ul>
+							<!-- .menu -->
+							<button id="menu-close" class="menu-toggle">
+								<span class="screen-reader-text">{{TRANSLATIONS.MENU.CLOSE_MENU}}</span>
+								<span class="icon-close" aria-hidden="true"></span>
+							</button>
+						</div>
+						<!-- .site-navigation-wrap -->
+					</nav>
+					<!-- .site-navigation -->
+					<button id="menu-open" class="menu-toggle">
+						<span class="screen-reader-text">{{TRANSLATIONS.MENU.OPEN_MENU}}</span>
+						<span class="icon-menu" aria-hidden="true"></span>
+					</button>
+				</header>
+
+				<!--
+				<div class="site-description fadeInDown delay_05s">
+					<p>Scriptor is a minimal, clean, modern & responsive Jekyll theme for writers</p>
+				</div>
+				-->
+
+				<!-- .site-description -->
+				<main class="main-content fadeInDown delay_075s">

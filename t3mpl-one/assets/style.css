@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;800&display=swap');
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, 
+cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, 
+dd, ol, ul, li, fieldset, form, label, input, button, textarea, legend, caption {
+	margin:0; padding:0; border:0; outline:0; font-size:100%; font-weight:inhert; font-style:inhert; 
+	vertical-align:baseline; background:transparent;
+}
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+	display:block;
+}
+h1, h2, h3, h4, h5, h6, strong, b {font-weight:normal;}
+i, em {font-style:normal;}
+article, aside, footer, header, hgroup, nav, section {display:block;}
+
+ol, ul {list-style:none;}
+a, a:hover {text-decoration:none;}
+table {border-collapse:collapse; border-spacing:0;}
+
+body {font: 17px/1em 'Open Sans', Arial, Verdana, Serif; background: #161616;}
+a {color: #000;}
+
+.main {background: #FFF;}
+
+@media screen and (max-width: 1049px) {
+	section, article {padding: 0 15px;}
+}
+@media screen and (min-width: 1080px) {
+	header, section, article {width: 1080px; margin: 0 auto;}
+}
+
+header a {padding: 0 5px; font-weight: 600; text-transform: uppercase;}
+header a:hover {color: #FFF; background: #000;}
+header nav ul li {display: inline-block; padding-left: 20px;}
+@media screen and (max-width: 1049px) {
+	header {width: 100%; padding: 10px 0; text-align: center;}
+	header h2, header nav {padding: 10px 15px;}
+	header h2 a {font-size: 22px; line-height: 1.35em;}
+	header nav a {font-size: 16px; line-height: 1.35em;}
+}
+@media screen and (min-width: 1050px) {
+	header {display: table;}
+	header a {font-size: 18px; line-height: 1.35em;}
+	header h2, header nav {display: table-cell;}
+	header h2, header nav {padding: 50px 0;}
+	header nav {text-align: right;}
+	html[dir=rtl] header nav {text-align: left;}
+}
+
+section.intro {text-align: center;}
+section.intro h3 {padding: 35px 0; font-size: 50px; line-height: 1.35em; font-weight: 800; letter-spacing: -0.025em; text-transform: uppercase;}
+section.intro h3 strong {display: inline-block; padding: 0 9px; color: #FFF; background: #000; font-weight: 800;}
+section.intro p {padding-bottom: 15px; line-height: 1.5em; width: 72%; margin: 0 auto;}
+section.intro p a {text-decoration: underline;}
+section.intro p a:hover {text-decoration: none;}
+section.intro img {margin: 50px 0 0; width: 100%; height: auto; vertical-align: bottom;}
+
+div.items {background: #DCDCDC;}
+section.items h4 {padding: 50px 0; text-align: center; font-size: 18px; font-weight: 600; text-transform: uppercase;}
+section.items ul {display: block; padding-bottom: 35px; text-align: center;}
+section.items ul li {width: 220px; display: inline-block; margin: 0 10px; padding-bottom: 45px; vertical-align: top;}
+section.items ul li h5 {padding: 15px 0; font-size: 18px; font-weight: 600; line-height: 1.5em;}
+section.items ul li a.edit {display: inline-block; background: #000; color: #FFF; padding: 10px 18px; font-weight: 600; text-transform: uppercase;}
+section.items ul li a.edit:hover {background: #FFF; color: #000;}
+section.items ul li p {padding: 15px 0 0; line-height: 1.5em; font-size: 13px; color: #5E5E5E;}
+section.items ul li p a {color: #5E5E5E; text-decoration: underline;}
+section.items ul li p a:hover {text-decoration: none;}
+
+article {line-height: 1.5em; padding-bottom: 50px;}
+article p, article h2, article h3, article h4, article ul, article ol {padding: 5px 0;}
+article h2 {font-size: 30px; font-weight: 800; line-height: 1.5em;}
+article h3 {font-size: 25px; font-weight: 600; line-height: 1.5em;}
+article h4 {font-size: 20px; font-weight: 600; line-height: 1.5em;}
+article ul, article ol {margin-left: 30px;}
+article ul {list-style-type: disc;}
+article ol {list-style-type: decimal;}
+article strong {font-weight: 600;}
+article a {text-decoration: underline;}
+article a:hover {text-decoration: none;}
+
+footer {padding: 50px 0; color: #FFF; text-align: center;}
+footer p {line-height: 1.5em;}
+footer p.by {padding-top: 25px; color: #626262;}
+footer p.by a {color: #626262;}
+footer p a {display: inline-block; color: #FFF; padding: 0 5px;}
+footer p a:hover {color: #000; background: #FFF;}
+

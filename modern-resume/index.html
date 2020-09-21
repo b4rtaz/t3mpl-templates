@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="{{COMMON.META.LANGUAGE}}">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>{{COMMON.META.TITLE}}</title>
+		{{{$css 'assets/style.css'}}}
+		{{#if COMMON.META.PRE_HTML}}
+			{{{$html COMMON.META.PRE_HTML}}}
+		{{/if}}
+		<meta name="description" content="{{COMMON.META.DESCRIPTION}}" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" href="{{$image COMMON.META.FAVICON}}" />
+	</head>
+	<body{{#if COMMON.THEME.DARK}} class="dark"{{/if}}>
+		<div class="container header-contianer">
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-8 header-left">
+					<h1>{{RESUME.BASIC.NAME}}</h1>
+					<h2>{{RESUME.BASIC.PROFESSION}}</h2>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 header-right">
+					<ul class="icons no-print">
+						{{#each RESUME.SOCIAL.SOCIALS}}
+						<li>
+							<a target="_blank" href="{{URL}}" class="button button--sacnite button--round-l" title="{{TITLE}}">
+								<i class="fab fa-{{ICON}}"></i>
+							</a>
+						</li>
+						{{/each}}
+					</ul>
+					{{#if RESUME.BASIC.EMAIL}}
+					<p>
+						{{RESUME.BASIC.EMAIL_LABEL}}
+						<a href="mailto:{{RESUME.BASIC.EMAIL}}" target="_blank">{{RESUME.BASIC.EMAIL}}</a>
+					</p>
+					{{/if}}
+					{{#if RESUME.BASIC.WEBSITE_URL}}
+					<p>
+						{{RESUME.BASIC.WEBSITE_LABEL}}
+						<a href="{{RESUME.BASIC.WEBSITE_URL}}" target="_blank" class="">{{RESUME.BASIC.WEBSITE_URL_LABEL}}</a>
+					</p>
+					{{/if}}
+				</div>
+			</div>
+		</div>
+		<main class="page-content" aria-label="Content">
+			<div class="wrapper">
+				{{#if RESUME.ABOUT_ME.SHOW}}
+				<div class="container intro-container">
+					<h3>{{RESUME.ABOUT_ME.TITLE}}</h3>
+					<div class="row clearfix">
+						<div class="col-xs-12 col-sm-4 col-md-3 no-print">
+							<span class="profile-img" style="background-image: url('{{$image RESUME.ABOUT_ME.PHOTO}}')"></span>
+						</div>
+						<div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
+							{{{$markdown RESUME.ABOUT_ME.DESCRIPTION}}}
+						</div>
+					</div>
+				</div>
+				{{/if}}
+				{{#if RESUME.PROJECTS.SHOW}}
+				<div class="container projects-container">
+					<h3>{{RESUME.PROJECTS.TITLE}}</h3>
+					{{#each RESUME.PROJECTS.PROJECTS}}
+					<div class="row clearfix layout layout-top-middle">
+						<div class="col-xs-12 col-print-12 details">
+							<h4>{{TITLE}}</h4>
+							{{#if WEBSITE_URL}}
+								<a href="{{WEBSITE_URL}}" target="_blank" class="link">{{WEBSITE_LABEL}}</a>
+							{{/if}}
+						</div>
+						<div class="col-xs-12 col-print-12">
+							{{{$markdown DESCRIPTION}}}
+						</div>
+					</div>
+					{{/each}}
+				</div>
+				{{/if}}
+				{{#if RESUME.EXPERIENCE.SHOW}}
+				<div class="container experience-container">
+					<h3>{{RESUME.EXPERIENCE.TITLE}}</h3>
+					{{#each RESUME.EXPERIENCE.PLACES}}
+					<div class="row clearfix layout layout-left">
+						<div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+							<h4>{{TITLE}}</h4>
+							{{#if COMPANY_URL}}
+								<a href="{{COMPANY_URL}}" target="_blank" class="link">{{COMPANY_URL_LABEL}}</a>
+							{{/if}}
+							<p><b>{{ROLE}}</b></p>
+							<p>{{WHEN}}</p>
+						</div>
+						<div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
+							{{{$markdown DESCRIPTION}}}
+						</div>
+					</div>
+					{{/each}}
+				</div>
+				{{/if}}
+				{{#if RESUME.EDUCATION.SHOW}}
+				<div class="container education-container">
+					<h3>{{RESUME.EDUCATION.TITLE}}</h3>
+					{{#each RESUME.EDUCATION.PLACES}}
+					<div class="row clearfix layout layout-left">
+						<div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+							<h4>{{TITLE}}</h4>
+							<p><b>{{DEGREE}}</b></p>
+							<p>{{WHEN}}</p>
+						</div>
+						<div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
+							{{{$markdown DESCRIPTION}}}
+						</div>
+					</div>
+					{{/each}}
+				</div>
+				{{/if}}
+				{{#if RESUME.MORE_ABOUT_ME.SHOW}}
+				<div class="container more-container">
+					<h3>{{RESUME.MORE_ABOUT_ME.TITLE}}</h3>
+					<div class="row clearfix">
+						<div class="col-md-12">
+
+							{{{$markdown RESUME.MORE_ABOUT_ME.DESCRIPTION}}}
+						</div>
+					</div>
+				</div>
+				{{/if}}
+			</div>
+		</main>
+		<div class="container footer-container">
+			<p>{{{$copyright}}} {{COMMON.FOOTER.COPYRIGHT}}</p>
+
+			{{#if COMMON.FOOTER.POWERED_BY}}
+				<p><small>{{{$powered_by}}}</small></p>
+			{{/if}}
+		</div>
+
+		{{#if COMMON.FOOTER.POST_HTML}}
+			{{{$html COMMON.FOOTER.POST_HTML}}}
+		{{/if}}
+	</body>
+</html>

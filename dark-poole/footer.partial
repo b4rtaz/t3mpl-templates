@@ -1,0 +1,12 @@
+			<footer class="footer">
+				<small>{{{$copyright}}} {{COMMON.FOOTER.COPYRIGHT}}</small>
+				{{#if COMMON.FOOTER.POWERED_BY}}
+				<br /><small>{{{$powered_by}}}</small>
+				{{/if}}
+			</footer>
+		</div>
+		{{#if COMMON.FOOTER.POST_HTML}}
+			{{{$html COMMON.FOOTER.POST_HTML}}}
+		{{/if}}
+	</body>
+</html>

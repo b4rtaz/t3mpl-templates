@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/konpa/devicon@df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+<html lang="{{COMMON.SEO.PAGE_LANGUAGE}}" dir="{{COMMON.SEO.DIRECTION}}">
+	<head>
+		<meta charset="UTF-8">
+		<title>{{COMMON.SEO.PAGE_TITLE}}</title>
+		<meta name="description" content="{{COMMON.SEO.PAGE_DESCRIPTION}}">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		{{{$css 'assets/css/style.css'}}}
+		<link rel="icon" href="{{$image COMMON.SEO.FAVICON}}" />
+	</head>
+	<body>
+		<div id="particles-js">
+			<div class="header">
+				<h1>
+					<span class="site-title">{{RESUME.BASIC.RESUME_TITLE}}</span>
+					<span class="site-description">{{RESUME.BASIC.RESUME_DESCRIPTION}}</span>
+				</h1>
+				<div class="header-icons">
+					{{#if RESUME.BASIC.EMAIL}}
+					<a title="{{RESUME.BASIC.EMAIL_DESCRIPTION}}" href="mailto:{{RESUME.BASIC.EMAIL}}"><i class="icon fa fa-envelope"></i></a>
+					{{/if}}
+		
+					{{#if RESUME.BASIC.INSTAGRAM_URL}}
+					<a title="{{RESUME.BASIC.INSTAGRAM_DESCRIPTION}}" target="_blank" href="{{RESUME.BASIC.INSTAGRAM_URL}}"><i class="icon fa fa-instagram" aria-hidden="true"></i></a>
+					{{/if}}
+	
+					{{#if RESUME.BASIC.FACEBOOK_URL}}
+					<a title="{{RESUME.BASIC.FACEBOOK_DESCRIPTION}}" target="_blank" href="{{RESUME.BASIC.FACEBOOK_URL}}"><i class="icon fa fa-facebook" aria-hidden="true"></i></a>
+					{{/if}}
+
+					{{#if RESUME.BASIC.LINKEDIN_URL}}
+					<a title="{{RESUME.BASIC.LINKEDIN_DESCRIPTION}}" target="_blank" href="{{RESUME.BASIC.LINKEDIN_URL}}"><i class="icon fa fa-linkedin-square" aria-hidden="true"></i></a>
+					{{/if}}
+
+					{{#if RESUME.BASIC.GITHUB_URL}}
+					<a title="{{RESUME.BASIC.GITHUB_DESCRIPTION}}" target="_blank" href="{{RESUME.BASIC.GITHUB_URL}}"><i class="icon fa fa-github-alt" aria-hidden="true"></i></a>
+					{{/if}}
+				</div>
+				<div class="header-links">
+					<!-- <a class="link" href="#about" data-scroll>About Me</a> -->
+				</div>
+			</div>
+			<a class="down" href="#about" data-scroll><i class="icon fa fa-chevron-down" aria-hidden="true"></i></a>
+		</div>
+		<section id="about">
+			<div class="user-details">
+				<h1>{{RESUME.EXPERIENCE.TITLE}}</h1>
+				<p>{{RESUME.EXPERIENCE.DESCRIPTION}}</p>
+			</div>
+			{{#if RESUME.EXPERIENCE.SHOW_SPECS}}
+			<div class="user">
+				{{#each RESUME.EXPERIENCE.SPECS}}
+				<div class="tech">
+					<h2>{{TITLE}}</h2>
+					{{> assets/_icon icon=ICON1}}
+					{{> assets/_icon icon=ICON2}}
+					{{> assets/_icon icon=ICON3}}
+
+					<p>{{DESCRIPTION}}</p>
+				</div>
+				{{/each}}
+			</div>
+			{{/if}}
+		</section>
+		<footer class="footer">
+			<p>{{{$copyright}}} {{RESUME.FOOTER.COPYRIGHT}}</p>
+			{{#if RESUME.FOOTER.POWERED_BY}}
+				<p><small>{{{$powered_by}}}</small></p>
+			{{/if}}
+		</footer>
+		{{{$script 'assets/js/sweet-scroll.min.js'}}}
+		
+		{{#if RESUME.BASIC.PARTICLES}}
+		<script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+		{{{$script 'assets/js/main.js'}}}
+		{{/if}}
+
+		{{#if RESUME.FOOTER.FOOTER_HTML}}
+			{{{$html RESUME.FOOTER.FOOTER_HTML}}}
+		{{/if}}
+	</body>
+</html>
