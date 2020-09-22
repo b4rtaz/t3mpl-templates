@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="icon" href="{{$image COMMON.META.FAVICON}}" />
 
-	<meta property="og:title" content="{{COMMON.META.TITLE}}" />
+	<meta property="og:title" content="{{#if title}}{{title}} - {{/if}}{{COMMON.META.TITLE}}" />
 	<meta property="og:description" content="{{COMMON.META.DESCRIPTION}}" />
 	<meta property="og:image" content="{{$image COMMON.META.OG_IMAGE}}" />
 
