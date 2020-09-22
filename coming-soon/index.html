@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="{{COMMON.META.LANGUAGE}}">
+<head>
+	<meta charset="UTF-8" />
+	<title>{{COMMON.META.TITLE}}</title>
+
+	<meta name="description" content="{{COMMON.META.DESCRIPTION}}" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="icon" href="{{$image COMMON.META.FAVICON}}" />
+
+	<meta property="og:title" content="{{COMMON.META.TITLE}}" />
+	<meta property="og:description" content="{{COMMON.META.DESCRIPTION}}" />
+	<meta property="og:image" content="{{$image COMMON.META.OG_IMAGE}}" />
+
+
+	{{#if COMMON.META.PRE_HTML}}
+		{{{$html COMMON.META.PRE_HTML}}}
+	{{/if}}
+
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+	{{{$css 'assets/fontawesome/css/brands.min.css'}}}
+	{{{$css 'assets/fontawesome/css/fontawesome.min.css'}}}
+	{{{$css 'assets/bootstrap.min.css'}}}
+	{{{$css 'assets/style.css'}}}
+</head>
+<body>
+	<div class="overlay" style="background-image: url('{{{$image COMMING_SOON.GENERAL.BACKGROUND}}}');"></div>
+
+	<div class="masthead">
+		<div class="masthead-bg"></div>
+		<div class="container h-100">
+			<div class="row h-100">
+				<div class="col-12 my-auto">
+					<div class="masthead-content text-white py-5 py-md-0">
+						<h1 class="mb-3">{{COMMING_SOON.INFO.TITLE}}</h1>
+						<div class="mb-5">
+							{{{$markdown COMMING_SOON.INFO.DESCRIPTION}}}
+						</div>
+
+					
+						{{#if COMMING_SOON.ACTION.SHOW}}
+							<a href="{{COMMING_SOON.ACTION.URL}}"{{#if COMMING_SOON.ACTION.OPEN_IN_NEW_TAB}} target="_blank"{{/if}} class="mb-5 btn btn-secondary text-light btn-lg">
+								{{COMMING_SOON.ACTION.TITLE}}
+							</a>
+						{{/if}}
+
+						{{#if COMMING_SOON.FORM.SHOW}}
+						<form action="{{COMMING_SOON.FORM.ACTION_URL}}" method="{{COMMING_SOON.FORM.ACTION_METHOD}}" class="mb-5">
+							{{#if COMMING_SOON.FORM.EXTRA_HTML}}
+								{{{$html COMMING_SOON.FORM.EXTRA_HTML}}}
+							{{/if}}
+							<div class="input-group input-group-newsletter">
+								<input name="{{COMMING_SOON.FORM.INPUT_NAME}}" type="text" class="form-control" placeholder="{{COMMING_SOON.FORM.PLACEHOLDER}}" aria-label="{{COMMING_SOON.FORM.PLACEHOLDER}}" aria-describedby="submit-button">
+								<div class="input-group-append">
+									<button class="btn btn-secondary" type="submit" id="submit-button">{{COMMING_SOON.FORM.BUTTON_TEXT}}</button>
+								</div>
+							</div>
+						</form>
+						{{/if}}
+
+						<div>
+							<small>
+								{{{$copyright}}} {{COMMON.FOOTER.COPYRIGHT}}
+								{{#if COMMON.FOOTER.POWERED_BY}}&mdash; {{{$powered_by}}}{{/if}}
+							</small>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="social-icons">
+		<ul class="list-unstyled text-center mb-0">
+		{{#each COMMING_SOON.SOCIALS.SOCIALS}}
+			<li class="list-unstyled-item">
+				<a href="{{URL}}"{{#if OPEN_IN_NEW_TAB}} target="_blank"{{/if}} title="{{ALT}}">
+					<i class="fab fa-{{ICON}}"></i>
+				</a>
+			</li>
+		{{/each}}
+		</ul>
+	</div>
+
+	<script>
+		window.addEventListener('DOMContentLoaded', function () {
+			var overlay = document.getElementsByClassName('overlay')[0];
+			overlay.style.height = document.body.scrollHeight + 'px';
+		});
+	</script>
+	{{#if COMMON.FOOTER.POST_HTML}}
+		{{{$html COMMON.FOOTER.POST_HTML}}}
+	{{/if}}
+</body>
+</html>

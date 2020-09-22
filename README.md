@@ -20,3 +20,5 @@ To get more information check [T3MPL Editor](https://github.com/b4rtaz/t3mpl-edi
 * [Scriptor](/scriptor) - Blog - [JustGoodThemes](https://justgoodthemes.com/) - MIT
 * [T3MPL One](/t3mpl-one) - Landing Page - [Bartlomiej Tadych](http://n4no.com/) - MIT
 * [Tailwind Landing Page](/tailwind-landing-page) - Landing Page - [Tailwind Toolbox](https://github.com/tailwindtoolbox/Landing-Page) - MIT
+* [Coming Soon](/coming-soon) - Coming Soon Page - [Start Bootstrap](https://github.com/StartBootstrap/startbootstrap-coming-soon) - MIT
+* [BSOD 404](/bsod-404) - Error Page - [Ian Gloude](https://codepen.io/igloude/pen/qNNWKr) - MIT
