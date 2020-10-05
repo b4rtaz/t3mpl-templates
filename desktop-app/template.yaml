@@ -1,11 +1,11 @@
 meta:
-  version: 3
-  name: T3MPL One
+  version: 1
+  name: Desktop App
   license: MIT
-  author: Bartlomiej Tadych
+  author: Bartlomiej Tadych (http://n4no.com/)
+  exportable: true
   homepageUrl: http://n4no.com/
   donationUrl: http://t3mpl.n4no.com/donate.html
-  exportable: true
   filePaths:
     - license.txt
     - index.html
@@ -15,58 +15,60 @@ meta:
     - assets/style.css
     - assets/favicon.png
     - assets/og-image.png
-    - assets/app.png
-    - assets/theme-preview.png
-    - content/markdown/landing-text.md
-    - content/markdown/item-text.md
-    - content/markdown/page-text.md
+    - assets/logo.png
+    - assets/app-preview.jpg
+    - content/markdown/app-descr.md
+    - content/markdown/contact-descr.md
+    - content/markdown/page.md
 
 dataContract:
 
-  ITEMS:
+  LANDING:
     sections:
-      ITEMS:
-        properties:
-          ITEMS:
-            type: (collection)
-            defaultOccurrences: 8
-            properties:
-              TITLE:
-                type: (text)
-                defaultValue: T3MPL One
-              PREVIEW:
-                type: (image)
-                defaultFilePath: assets/theme-preview.png
-                width: 440
-                height: 520
-              ACTION_URL:
-                type: (text)
-                defaultValue: http://n4no.com/
-              DESCRIPTION:
-                type: (markdown)
-                defaultFilePath: content/markdown/item-text.md
-
-      TRANSLATIONS:
+      APP:
         properties:
           TITLE:
             type: (text)
-            defaultValue: Items
-          ACTION:
-            type: (text)
-            defaultValue: 'Press me'
-
-  LANDING:
-    sections:
-      LANDING:
-        properties:
-          TEXT:
+            defaultValue: Hello World
+          DESCRIPTION:
             type: (markdown)
-            defaultFilePath: content/markdown/landing-text.md
+            defaultFilePath: content/markdown/app-descr.md
           PREVIEW:
             type: (image)
-            defaultFilePath: assets/app.png
-            width: 2100
-            height: 844
+            defaultFilePath: assets/app-preview.jpg
+            width: 1084
+            height: 840
+          LINKS:
+            type: (collection)
+            defaultOccurrences: 1
+            properties:
+              TITLE:
+                type: (text)
+                defaultValue: Download it Now
+              URL:
+                type: (text)
+                defaultValue: http://example.com/
+              OPEN_IN_NEW_WINDOW:
+                type: (boolean)
+                defaultValue: true
+              STYLE:
+                type: (choice)
+                values: [primary, secondary]
+                defaultValue: primary
+      CONTACT:
+        properties:
+          TITLE:
+            type: (text)
+            defaultValue: What do you need?
+          DESCRIPTION:
+            type: (markdown)
+            defaultFilePath: content/markdown/contact-descr.md
+          BUTTON_TITLE:
+            type: (text)
+            defaultValue: Write to Us
+          BUTTON_URL:
+            type: (text)
+            defaultValue: mailto:foo@example.com
 
   PAGES:
     sections:
@@ -79,15 +81,12 @@ dataContract:
               TITLE:
                 type: (text)
                 defaultValue: Page
-              FILE_NAME:
+              FILE_PATH:
                 type: (text)
                 required: false
               CONTENT:
                 type: (markdown)
-                defaultFilePath: content/markdown/page-text.md
-              HEADER:
-                type: (boolean)
-                defaultValue: true
+                defaultFilePath: content/markdown/page.md
 
   COMMON:
     _label: Common
@@ -127,34 +126,35 @@ dataContract:
             _label: Pre HTML
             _description: i.e. cookie banner
             required: false
-
       HEADER:
         properties:
-          SITE_NAME:
+          TITLE:
             type: (text)
-            defaultValue: T3MPL One
+            defaultValue: Desktop App
+          LOGO:
+            type: (image)
+            defaultFilePath: assets/logo.png
+            width: 110
+            height: 110
           LINKS:
             type: (collection)
-            defaultOccurrences: 2
+            defaultOccurrences: 1
             properties:
               TITLE:
                 type: (text)
-                defaultValue: GitHub
+                defaultValue: Link
               URL:
                 type: (text)
                 defaultValue: http://n4no.com/
-              OPEN_IN_NEW_TAB:
+              OPEN_IN_NEW_WINDOW:
                 type: (boolean)
                 defaultValue: true
       FOOTER:
         properties:
           COPYRIGHT:
             type: (text)
-            defaultValue: All rights reserved.
+            defaultValue: All rights reserved
           POWERED_BY:
-            type: (boolean)
-            defaultValue: true
-          TEMPLATE_BY:
             type: (boolean)
             defaultValue: true
           POST_HTML:
@@ -173,4 +173,4 @@ pages:
     templateFilePath: page.html
     multiplier:
       dataPath: PAGES.PAGES.PAGES
-      fileNameDataPath: FILE_NAME
+      fileNameDataPath: FILE_PATH

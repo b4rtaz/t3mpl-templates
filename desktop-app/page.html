@@ -1,0 +1,13 @@
+{{> header _title=$PAGE.DATA.TITLE}}
+
+<article>
+	<div class="container">
+		<h2>{{$PAGE.DATA.TITLE}}</h2>
+
+		{{#if $PAGE.DATA.CONTENT}}
+			{{{$markdown $PAGE.DATA.CONTENT}}}
+		{{/if}}
+	</div>
+</article>
+
+{{> footer}}
