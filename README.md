@@ -2,7 +2,7 @@
 
 [![Twitter: b4rtaz](https://img.shields.io/twitter/follow/b4rtaz.svg?style=social)](https://twitter.com/b4rtaz)
 
-This repository contains T3MPL templates which are available on [t3mpl.n4no.com](http://t3mpl.n4no.com).
+This repository contains T3MPL templates which are available on [t3mpl.n4no.com](https://t3mpl.n4no.com).
 
 To get more information check [T3MPL Editor](https://github.com/b4rtaz/t3mpl-editor) repository.
 
