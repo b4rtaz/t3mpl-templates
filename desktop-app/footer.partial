@@ -5,7 +5,7 @@
 		{{#if COMMON.FOOTER.POWERED_BY}}
 			<p><small>{{{$powered_by}}}</small></p>
 		{{/if}}
-		<p>Template by b4rtaz, <a href="http://n4no.com/">N4NO</a></p>
+		<p>Template by b4rtaz, <a href="https://n4no.com/">N4NO</a></p>
 	</div>
 </footer>
 

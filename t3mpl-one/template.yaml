@@ -3,8 +3,8 @@ meta:
   name: T3MPL One
   license: MIT
   author: Bartlomiej Tadych
-  homepageUrl: http://n4no.com/
-  donationUrl: http://t3mpl.n4no.com/donate.html
+  homepageUrl: https://n4no.com/
+  donationUrl: https://t3mpl.n4no.com/donate.html
   exportable: true
   filePaths:
     - license.txt
@@ -41,7 +41,7 @@ dataContract:
                 height: 520
               ACTION_URL:
                 type: (text)
-                defaultValue: http://n4no.com/
+                defaultValue: https://n4no.com/
               DESCRIPTION:
                 type: (markdown)
                 defaultFilePath: content/markdown/item-text.md
@@ -142,7 +142,7 @@ dataContract:
                 defaultValue: GitHub
               URL:
                 type: (text)
-                defaultValue: http://n4no.com/
+                defaultValue: https://n4no.com/
               OPEN_IN_NEW_TAB:
                 type: (boolean)
                 defaultValue: true

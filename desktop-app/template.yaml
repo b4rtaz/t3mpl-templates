@@ -2,10 +2,10 @@ meta:
   version: 1
   name: Desktop App
   license: MIT
-  author: Bartlomiej Tadych (http://n4no.com/)
+  author: Bartlomiej Tadych (https://n4no.com/)
   exportable: true
-  homepageUrl: http://n4no.com/
-  donationUrl: http://t3mpl.n4no.com/donate.html
+  homepageUrl: https://n4no.com/
+  donationUrl: https://t3mpl.n4no.com/donate.html
   filePaths:
     - license.txt
     - index.html
@@ -145,7 +145,7 @@ dataContract:
                 defaultValue: Link
               URL:
                 type: (text)
-                defaultValue: http://n4no.com/
+                defaultValue: https://n4no.com/
               OPEN_IN_NEW_WINDOW:
                 type: (boolean)
                 defaultValue: true

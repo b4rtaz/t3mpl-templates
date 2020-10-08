@@ -209,7 +209,7 @@ dataContract:
                 defaultValue: GitHub
               URL:
                 type: (text)
-                defaultValue: http://n4no.com/
+                defaultValue: https://n4no.com/
               OPEN_IN_NEW_TAB:
                 type: (boolean)
                 defaultValue: true

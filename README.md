@@ -1,6 +1,6 @@
 # T3MPL Templates
 
-[![Twitter: b4rtaz](https://img.shields.io/twitter/follow/b4rtaz.svg?style=social)](https://twitter.com/b4rtaz)
+[![Build Status](https://travis-ci.org/b4rtaz/t3mpl-templates.svg?branch=master)](https://travis-ci.org/b4rtaz/t3mpl-templates) [![Twitter: b4rtaz](https://img.shields.io/twitter/follow/b4rtaz.svg?style=social)](https://twitter.com/b4rtaz)
 
 This repository contains T3MPL templates which are available on [t3mpl.n4no.com](https://t3mpl.n4no.com).
 
@@ -18,8 +18,8 @@ To get more information check [T3MPL Editor](https://github.com/b4rtaz/t3mpl-edi
 * [Mobile App Landing Page](/mobile-app-landing-page) - Mobile App - [Sandoche Adittane](https://github.com/sandoche/Mobile-app-landingpage-template) - MIT
 * [Modern Resume](/modern-resume) - Resume -  [James Grant](https://github.com/sproogen/modern-resume-theme) - MIT
 * [Scriptor](/scriptor) - Blog - [JustGoodThemes](https://justgoodthemes.com/) - MIT
-* [T3MPL One](/t3mpl-one) - Landing Page - [Bartlomiej Tadych](http://n4no.com/) - MIT
-* [Desktop App](/desktop-app) - Desktop App - [Bartlomiej Tadych](http://n4no.com/) - MIT
+* [T3MPL One](/t3mpl-one) - Landing Page - [Bartlomiej Tadych](https://n4no.com/) - MIT
+* [Desktop App](/desktop-app) - Desktop App - [Bartlomiej Tadych](https://n4no.com/) - MIT
 * [Tailwind Landing Page](/tailwind-landing-page) - Landing Page - [Tailwind Toolbox](https://github.com/tailwindtoolbox/Landing-Page) - MIT
 * [Coming Soon](/coming-soon) - Coming Soon Page - [Start Bootstrap](https://github.com/StartBootstrap/startbootstrap-coming-soon) - MIT
 * [BSOD 404](/bsod-404) - Error Page - [Ian Gloude](https://codepen.io/igloude/pen/qNNWKr) - MIT
