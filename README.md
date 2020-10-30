@@ -23,3 +23,4 @@ To get more information check [T3MPL Editor](https://github.com/b4rtaz/t3mpl-edi
 * [Tailwind Landing Page](/tailwind-landing-page) - Landing Page - [Tailwind Toolbox](https://github.com/tailwindtoolbox/Landing-Page) - MIT
 * [Coming Soon](/coming-soon) - Coming Soon Page - [Start Bootstrap](https://github.com/StartBootstrap/startbootstrap-coming-soon) - MIT
 * [BSOD 404](/bsod-404) - Error Page - [Ian Gloude](https://codepen.io/igloude/pen/qNNWKr) - MIT
+* [Low Poly 404](/low-poly-404) - Error Page - [Clement Girault](https://codepen.io/clementGir/pen/PqGyMq) - MIT

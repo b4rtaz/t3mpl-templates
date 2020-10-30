@@ -5,7 +5,7 @@ meta:
   author: Bartlomiej Tadych (https://n4no.com/)
   exportable: true
   homepageUrl: https://n4no.com/
-  donationUrl: https://t3mpl.n4no.com/donate.html
+  donationUrl: https://t3mpl.n4no.com/donate/
   filePaths:
     - license.txt
     - index.html

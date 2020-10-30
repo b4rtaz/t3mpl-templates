@@ -1,0 +1,95 @@
+meta:
+  version: 1
+  name: Low Poly 404
+  license: MIT
+  author: Clement Girault
+  exportable: true
+  homepageUrl: https://codepen.io/clementGir/pen/PqGyMq
+  filePaths:
+    - license.txt
+    - index.html
+    - assets/favicon.png
+    - assets/og-image.png
+
+dataContract:
+
+  ERROR:
+    sections:
+      ERROR:
+        properties:
+          PRIMARY_COLOR:
+            type: (color)
+            defaultValue: '#63C4AE'
+          TEXT_COLOR:
+            type: (color)
+            defaultValue: '#FFFFFF'
+          BACKGROUND_COLOR:
+            type: (color)
+            defaultValue: '#000000'
+          TITLE:
+            type: (text)
+            defaultValue: Page Not Found
+          LINKS:
+            type: (collection)
+            defaultOccurrences: 1
+            properties:
+              TITLE:
+                type: (text)
+                defaultValue: Go Back
+              URL:
+                type: (text)
+                defaultValue: http://twitter.com/
+              OPEN_IN_NEW_TAB:
+                type: (boolean)
+                defaultValue: false
+              
+  COMMON:
+    _label: Common
+    sections:
+      META:
+        _label: Meta
+        properties:
+          LANGUAGE:
+            type: (choice)
+            valuesSet: (iso6391Languages)
+            defaultValue: en
+          DIRECTION:
+            type: (choice)
+            valuesSet: (direction)
+            defaultValue: auto
+          TITLE:
+            type: (text)
+            defaultValue: '404'
+            _label: Page Title
+          DESCRIPTION:
+            type: (text)
+            defaultValue: 404 Page Not Found
+            _label: Page Description
+          FAVICON:
+            type: (image)
+            width: 32
+            height: 32
+            defaultFilePath: assets/favicon.png
+          OG_IMAGE:
+            type: (image)
+            width: 1200
+            height: 630
+            defaultFilePath: assets/og-image.png
+            _label: Open Graph Image
+          PRE_HTML:
+            type: (html)
+            _label: Pre HTML
+            _description: i.e. cookie banner
+            required: false
+      FOOTER:
+        properties:
+          POST_HTML:
+            type: (html)
+            _label: Post HTML
+            _description: i.e. plugins, tracking
+            required: false
+
+pages:
+  INDEX:
+    filePath: index.html
+    templateFilePath: index.html

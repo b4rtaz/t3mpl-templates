@@ -4,7 +4,7 @@ meta:
   license: MIT
   author: Bartlomiej Tadych
   homepageUrl: https://n4no.com/
-  donationUrl: https://t3mpl.n4no.com/donate.html
+  donationUrl: https://t3mpl.n4no.com/donate/
   exportable: true
   filePaths:
     - license.txt

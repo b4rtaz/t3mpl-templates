@@ -14,3 +14,4 @@ t3mpl build --outDir=build/ --exampleData=true --manifest=modern-resume/template
 t3mpl build --outDir=build/ --exampleData=true --manifest=scriptor/template.yaml
 t3mpl build --outDir=build/ --exampleData=true --manifest=t3mpl-one/template.yaml
 t3mpl build --outDir=build/ --exampleData=true --manifest=tailwind-landing-page/template.yaml
+t3mpl build --outDir=build/ --exampleData=true --manifest=low-poly-404/template.yaml
