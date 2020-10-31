@@ -1,0 +1,63 @@
+/* reset */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big,
+cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt,
+dd, ol, ul, li, fieldset, form, label, input, button, textarea, legend, caption {
+	margin:0; padding:0; border:0; outline:0; font-size:100%; font-weight:inhert; font-style:inhert;
+	vertical-align:baseline; background:transparent;
+}
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+	display:block;
+}
+h1, h2, h3, h4, h5, h6, strong, b {font-weight:normal;}
+i, em {font-style:normal;}
+article, aside, footer, header, hgroup, nav, section {display:block;}
+
+ol, ul {list-style:none;}
+a, a:hover {text-decoration:none;}
+
+/* main */
+
+body {font-size: 14px; line-height: 1.4em;}
+body.font-open-sans {font-family: 'Open Sans', Arial, Verdana, Serif;}
+body.font-roboto-slab {font-family: 'Roboto Slab', Serif;}
+body.font-ubuntu {font-family: Ubuntu, Serif;}
+
+body.theme-light {background: #D8D8D8; color: #000;}
+body.theme-dark {background: #3E3E3E; color: #C9C9C9;}
+
+.qr-menu {box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);}
+@media screen and (min-width: 800px) {
+	.qr-menu {max-width: 400px; margin: 15px auto 0;}
+}
+
+.qr-menu header {text-align: center;}
+.qr-menu header h1 {text-align: center; padding: 30px 0; font-size: 20px; font-weight: 600; line-height: 1.4em;}
+.qr-menu header img {width: 100%; height: auto; vertical-align: bottom;}
+body.theme-light .qr-menu header {background: #FFF;}
+body.theme-dark .qr-menu header {background: #2E2E2E;}
+body.theme-dark .qr-menu header h1 {color: #FFF;}
+
+.qr-menu ul.groups li.group {padding: 5px 15px;}
+
+.qr-menu ul.groups li.group h3 {position: relative; margin: 15px 0; padding: 10px 0; font-size: 28px; line-height: 1.4em; font-weight: 600; text-align: center; border-top: 1px solid #000; border-bottom: 1px solid #000;}
+.qr-menu ul.groups li.group ul.items li.item span.header {display: table; width: 100%; margin: 10px 0;}
+.qr-menu ul.groups li.group ul.items li.item span.header span.title {display: table-cell; vertical-align: middle;}
+.qr-menu ul.groups li.group ul.items li.item span.header span.title h4 {display: inline; vertical-align: middle; font-size: 18px; line-height: 1.4em; font-weight: 600;}
+.qr-menu ul.groups li.group ul.items li.item span.header span.title span.badge {display: inline; vertical-align: middle; padding: 2px 5px; margin: 0 5px; color: #000; background: #F7CE00; font-size: 12px; line-height: 1.4em; font-weight: 600;}
+.qr-menu ul.groups li.group ul.items li.item span.header strong.price {display: table-cell; vertical-align: middle; text-align: right; white-space: nowrap;}
+.qr-menu ul.groups li.group ul.items li.item span.header strong.price span.old-price {margin: 0 5px; font-size: 14px; line-height: 1.4em; text-decoration: line-through;}
+.qr-menu ul.groups li.group ul.items li.item span.header strong.price strong {font-size: 22px; line-height: 1.4em; font-weight: 600;}
+html[dir=rtl] .qr-menu ul.groups li.group ul.items li.item span.header strong.price {text-align: left;}
+.qr-menu ul.groups li.group ul.items li.item img {width: 100%; height: auto;}
+.qr-menu ul.groups li.group ul.items li.item p {padding: 10px 0;}
+body.theme-light .qr-menu ul.groups li.group:nth-child(odd) {background: #F0F0F0;}
+body.theme-light .qr-menu ul.groups li.group:nth-child(even) {background: #FFF;}
+body.theme-light .qr-menu ul.groups li.group h3 {border-color: #D7D7D7;}
+body.theme-dark .qr-menu ul.groups li.group:nth-child(odd) {background: #252525;}
+body.theme-dark .qr-menu ul.groups li.group:nth-child(even) {background: #2E2E2E;}
+body.theme-dark .qr-menu ul.groups li.group h3 {color: #FFF; border-color: #3E3E3E;}
+
+footer {padding: 15px; text-align: center;}
+body.theme-light footer, body.theme-light footer a {color: #6A6A6A;}
+body.theme-dark footer, body.theme-dark footer a {color: #A7A7A7;}

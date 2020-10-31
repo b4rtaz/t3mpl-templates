@@ -1,0 +1,138 @@
+meta:
+  version: 1
+  name: QR Menu
+  license: MIT
+  author: Bartlomiej Tadych (http://n4no.com/)
+  exportable: true
+  homepageUrl: http://n4no.com/
+  donationUrl: https://t3mpl.n4no.com/donate/
+  filePaths:
+    - license.txt
+    - index.html
+    - assets/style.css
+    - assets/favicon.png
+    - assets/og-image.png
+    - assets/product-photo-example.jpg
+    - assets/logo-example.png
+
+dataContract:
+
+  OFFER:
+    sections:
+      OFFER:
+        properties:
+          MENU_GROUPS:
+            type: (collection)
+            defaultOccurrences: 2
+            properties:
+              TITLE:
+                type: (text)
+                defaultValue: Dinner
+              MENU_ITEMS:
+                type: (collection)
+                defaultOccurrences: 2
+                properties:
+                  PHOTO:
+                    type: (image)
+                    required: false
+                    defaultFilePath: assets/product-photo-example.jpg
+                    width: 720
+                    height: 480
+                  TITLE:
+                    type: (text)
+                    defaultValue: Pizza Capriciosa
+                  PRICE: 
+                    type: (text)
+                    defaultValue: 10 $
+                  OLD_PRICE: 
+                    type: (text)
+                    defaultValue: 12 $
+                    required: false
+                  BADGE:
+                    type: (text)
+                    defaultValue: Promo
+                    required: false
+                  DESCRIPTION: 
+                    type: (text)
+                    defaultValue: Mozzarella cheese, Italian baked ham, mushroom, artichoke and tomato.
+                    required: false
+
+  COMMON:
+    _label: Common
+    sections:
+      THEME:
+        properties:
+          FONT:
+            type: (choice)
+            values: [open-sans, roboto-slab, ubuntu]
+            defaultValue: roboto-slab
+          THEME:
+            type: (choice)
+            values: [light, dark]
+            defaultValue: light
+
+      HEADER:
+        properties:
+          TITLE:
+            type: (text)
+            defaultValue: My Restaurant
+          LOGO:
+            type: (image)
+            required: false
+            defaultFilePath: assets/logo-example.png
+            width: 800
+            height: 280
+
+      META:
+        _label: Meta
+        properties:
+          LANGUAGE:
+            type: (choice)
+            valuesSet: (iso6391Languages)
+            defaultValue: en
+          DIRECTION:
+            type: (choice)
+            valuesSet: (direction)
+            defaultValue: auto
+          TITLE:
+            type: (text)
+            defaultValue: My Restaurant
+            _label: Page Title
+          DESCRIPTION:
+            type: (text)
+            defaultValue: Menu of My Restaurant
+            _label: Page Description
+          FAVICON:
+            type: (image)
+            width: 32
+            height: 32
+            defaultFilePath: assets/favicon.png
+          OG_IMAGE:
+            type: (image)
+            width: 1200
+            height: 630
+            defaultFilePath: assets/og-image.png
+            _label: Open Graph Image
+          PRE_HTML:
+            type: (html)
+            _label: Pre HTML
+            _description: i.e. cookie banner
+            required: false
+      FOOTER:
+        properties:
+          COPYRIGHT:
+            type: (text)
+            defaultValue: All rights reserved
+          POWERED_BY:
+            type: (boolean)
+            defaultValue: true
+          POST_HTML:
+            type: (html)
+            _label: Post HTML
+            _description: i.e. plugins, tracking
+            required: false
+
+pages:
+  INDEX:
+    filePath: index.html
+    templateFilePath: index.html

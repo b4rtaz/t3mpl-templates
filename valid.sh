@@ -1,17 +1,24 @@
 #!/bin/bash
 
+build()
+{
+	echo "> $1"
+	t3mpl build --outDir=build/ --exampleData=true --manifest=$1
+}
+
 t3mpl version
-t3mpl build --outDir=build/ --exampleData=true --manifest=app-landing-page/template.yaml
-t3mpl build --outDir=build/ --exampleData=true --manifest=auto-app-landing-page/template.yaml
-t3mpl build --outDir=build/ --exampleData=true --manifest=bsod-404/template.yaml
-t3mpl build --outDir=build/ --exampleData=true --manifest=coming-soon/template.yaml
-t3mpl build --outDir=build/ --exampleData=true --manifest=dark-poole/template.yaml
-t3mpl build --outDir=build/ --exampleData=true --manifest=desktop-app/template.yaml
-t3mpl build --outDir=build/ --exampleData=true --manifest=fuse-core/template.yaml
-t3mpl build --outDir=build/ --exampleData=true --manifest=minimal-resume/template.yaml
-t3mpl build --outDir=build/ --exampleData=true --manifest=mobile-app-landing-page/template.yaml
-t3mpl build --outDir=build/ --exampleData=true --manifest=modern-resume/template.yaml
-t3mpl build --outDir=build/ --exampleData=true --manifest=scriptor/template.yaml
-t3mpl build --outDir=build/ --exampleData=true --manifest=t3mpl-one/template.yaml
-t3mpl build --outDir=build/ --exampleData=true --manifest=tailwind-landing-page/template.yaml
-t3mpl build --outDir=build/ --exampleData=true --manifest=low-poly-404/template.yaml
+build app-landing-page/template.yaml
+build auto-app-landing-page/template.yaml
+build bsod-404/template.yaml
+build coming-soon/template.yaml
+build dark-poole/template.yaml
+build desktop-app/template.yaml
+build fuse-core/template.yaml
+build low-poly-404/template.yaml
+build minimal-resume/template.yaml
+build mobile-app-landing-page/template.yaml
+build modern-resume/template.yaml
+build qr-menu/template.yaml
+build scriptor/template.yaml
+build t3mpl-one/template.yaml
+build tailwind-landing-page/template.yaml
