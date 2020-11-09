@@ -52,7 +52,7 @@ dataContract:
                 defaultValue: GitHub
               HREF:
                 type: (text)
-                defaultValue: https://t3mpl/n4no.com/
+                defaultValue: https://n4no.com/
               OPEN_IN_NEW_WINDOW:
                 type: (boolean)
                 defaultValue: false
