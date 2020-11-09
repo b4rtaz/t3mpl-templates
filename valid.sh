@@ -18,6 +18,7 @@ build low-poly-404/template.yaml
 build minimal-resume/template.yaml
 build mobile-app-landing-page/template.yaml
 build modern-resume/template.yaml
+build profile-card/template.yaml
 build qr-menu/template.yaml
 build scriptor/template.yaml
 build t3mpl-one/template.yaml

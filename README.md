@@ -21,6 +21,7 @@ To get more information check [T3MPL Editor](https://github.com/b4rtaz/t3mpl-edi
 * [Minimal Resume](/minimal-resume) - Resume - [Mauricio Urraco](https://github.com/murraco/jekyll-theme-minimal-resume) - MIT
 * [Mobile App Landing Page](/mobile-app-landing-page) - Mobile App - [Sandoche Adittane](https://github.com/sandoche/Mobile-app-landingpage-template) - MIT
 * [Modern Resume](/modern-resume) - Resume -  [James Grant](https://github.com/sproogen/modern-resume-theme) - MIT
+* [Profile Card](/profile-card) - Profile Card - [Florin Pop](Florin Pop) - MIT
 * [QR Menu](/qr-menu) - QR Menu - [Bartlomiej Tadych](https://n4no.com/) - MIT
 * [Scriptor](/scriptor) - Blog - [JustGoodThemes](https://justgoodthemes.com/) - MIT
 * [T3MPL One](/t3mpl-one) - Landing Page - [Bartlomiej Tadych](https://n4no.com/) - MIT
