@@ -1,0 +1,141 @@
+meta:
+  version: 1
+  name: Profile Card
+  license: MIT
+  author: Florin Pop, Bartlomiej Tadych
+  exportable: true
+  homepageUrl: https://codepen.io/FlorinPop17/pen/EJKgKB
+  filePaths:
+    - license.txt
+    - index.html
+    - assets/style.css
+    - assets/favicon.png
+    - assets/og-image.png
+    - assets/avatar.jpg
+    - content/markdown/description.md
+
+dataContract:
+
+  CARD:
+    sections:
+      CARD:
+        properties:
+          BADGE:
+            type: (text)
+            required: false
+            _description: Optional
+            defaultValue: Pro
+          AVATAR:
+            type: (image)
+            width: 256
+            height: 256
+            defaultFilePath: assets/avatar.jpg
+          NAME:
+            type: (text)
+            defaultValue: Ricky Park
+          CITY:
+            type: (text)
+            defaultValue: New York
+          DESCRIPTION:
+            type: (markdown)
+            defaultFilePath: content/markdown/description.md
+          LINKS:
+            type: (collection)
+            defaultOccurrences: 2
+            properties:
+              STYLE:
+                type: (choice)
+                values: [primary(primary), ghost(primary ghost)]
+                defaultValue: primary
+              LABEL:
+                type: (text)
+                defaultValue: GitHub
+              HREF:
+                type: (text)
+                defaultValue: https://t3mpl/n4no.com/
+              OPEN_IN_NEW_WINDOW:
+                type: (boolean)
+                defaultValue: false
+
+      SKILLS:
+        properties:
+          TITLE:
+            type: (text)
+            defaultValue: Skills
+          SKILLS:
+            type: (collection)
+            defaultOccurrences: 6
+            properties:
+              LABEL:
+                type: (text)
+                defaultValue: JavaScript
+
+  COMMON:
+    _label: Common
+    sections:
+      THEME:
+        properties:
+          THEME:
+            type: (choice)
+            values: [violet, dark, light]
+            defaultValue: light
+
+      META:
+        _label: Meta
+        properties:
+          LANGUAGE:
+            type: (choice)
+            valuesSet: (iso6391Languages)
+            defaultValue: en
+          DIRECTION:
+            type: (choice)
+            valuesSet: (direction)
+            defaultValue: auto
+          TITLE:
+            type: (text)
+            defaultValue: My Page Title
+            _label: Page Title
+          DESCRIPTION:
+            type: (text)
+            defaultValue: My Page Description
+            _label: Page Description
+          FAVICON:
+            type: (image)
+            width: 32
+            height: 32
+            defaultFilePath: assets/favicon.png
+          OG_IMAGE:
+            type: (image)
+            width: 1200
+            height: 630
+            defaultFilePath: assets/og-image.png
+            _label: Open Graph Image
+          PRE_HTML:
+            type: (html)
+            _label: Pre HTML
+            _description: i.e. cookie banner
+            required: false
+      FOOTER:
+        properties:
+          COPYRIGHT:
+            type: (text)
+            defaultValue: All rights reserved
+          POWERED_BY:
+            type: (boolean)
+            defaultValue: true
+          CREATED_BY:
+            type: (boolean)
+            defaultValue: true
+          DESIGNED_BY:
+            type: (boolean)
+            defaultValue: true
+          POST_HTML:
+            type: (html)
+            _label: Post HTML
+            _description: i.e. plugins, tracking
+            required: false
+
+pages:
+  INDEX:
+    filePath: index.html
+    templateFilePath: index.html
