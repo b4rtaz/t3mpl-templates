@@ -1,7 +1,9 @@
-{{> header title=$PAGE.DATA.TITLE}}
+{{> header title=$PAGE.DATA.TITLE description=($markdown2text $PAGE.DATA.CONTENT 160)}}
 
-<article>
-	{{{$markdown $PAGE.DATA.CONTENT}}}
-</article>
+<div class="block">
+	<article>
+		{{{$markdown $PAGE.DATA.CONTENT}}}
+	</article>
+</div>
 
 {{> footer}}

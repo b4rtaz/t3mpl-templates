@@ -1,5 +1,5 @@
 meta:
-  version: 3
+  version: 4
   name: T3MPL One
   license: MIT
   author: Bartlomiej Tadych
@@ -33,7 +33,7 @@ dataContract:
             properties:
               TITLE:
                 type: (text)
-                defaultValue: T3MPL One
+                defaultValue: Item Name
               PREVIEW:
                 type: (image)
                 defaultFilePath: assets/theme-preview.png

@@ -4,12 +4,12 @@
 	<meta charset="UTF-8" />
 	<title>{{#if title}}{{title}} - {{/if}}{{COMMON.META.TITLE}}</title>
 
-	<meta name="description" content="{{COMMON.META.DESCRIPTION}}" />
+	<meta name="description" content="{{#if description}}{{description}}{{else}}{{COMMON.META.DESCRIPTION}}{{/if}}" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="icon" href="{{$image COMMON.META.FAVICON}}" />
 
 	<meta property="og:title" content="{{#if title}}{{title}} - {{/if}}{{COMMON.META.TITLE}}" />
-	<meta property="og:description" content="{{COMMON.META.DESCRIPTION}}" />
+	<meta property="og:description" content="{{#if description}}{{description}}{{else}}{{COMMON.META.DESCRIPTION}}{{/if}}" />
 	<meta property="og:image" content="{{$image COMMON.META.OG_IMAGE}}" />
 
 	{{{$css 'assets/style.css'}}}
@@ -20,15 +20,17 @@
 </head>
 <body>
 <div class="main">
-	<header>
+	<header class="block">
 		<h2>{{{$page_link $PAGES.INDEX.FILE_PATH COMMON.HEADER.SITE_NAME}}}</h2>
 
 		<nav>
 			<ul>
 			{{#each $PAGES.PAGE}}
+			{{#if DATA.HEADER}}
 				<li>
 					{{{$page_link FILE_PATH DATA.TITLE}}}
 				</li>
+			{{/if}}
 			{{/each}}
 			{{#each COMMON.HEADER.LINKS}}
 				<li>

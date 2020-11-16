@@ -23,17 +23,17 @@ a {color: #000;}
 .main {background: #FFF;}
 
 @media screen and (max-width: 1049px) {
-	section, article {padding: 0 15px;}
+	.block {padding: 0 15px;}
 }
-@media screen and (min-width: 1080px) {
-	header, section, article {width: 1080px; margin: 0 auto;}
+@media screen and (min-width: 1050px) {
+	.block {width: 1050px; margin: 0 auto;}
 }
 
 header a {padding: 0 5px; font-weight: 600; text-transform: uppercase;}
 header a:hover {color: #FFF; background: #000;}
 header nav ul li {display: inline-block; padding-left: 20px;}
 @media screen and (max-width: 1049px) {
-	header {width: 100%; padding: 10px 0; text-align: center;}
+	header {padding: 10px 0; text-align: center;}
 	header h2, header nav {padding: 10px 15px;}
 	header h2 a {font-size: 22px; line-height: 1.35em;}
 	header nav a {font-size: 16px; line-height: 1.35em;}
@@ -74,16 +74,24 @@ section.items ul li p a:hover {text-decoration: none;}
 }
 
 article {line-height: 1.5em; padding-bottom: 50px;}
-article p, article h2, article h3, article h4, article ul, article ol {padding: 5px 0;}
+article p, article h2, article h3, article h4, article ul, article ol {padding: 8px 0;}
+article p {text-align: justify;}
+article h1 {font-size: 34px; font-weight: 800; line-height: 1.5em;}
 article h2 {font-size: 30px; font-weight: 800; line-height: 1.5em;}
 article h3 {font-size: 25px; font-weight: 600; line-height: 1.5em;}
 article h4 {font-size: 20px; font-weight: 600; line-height: 1.5em;}
 article ul, article ol {margin-left: 30px;}
 article ul {list-style-type: disc;}
 article ol {list-style-type: decimal;}
+article ul ul, article ul ol, article ol ul, article ol ol {padding-top: 0; padding-bottom: 0;}
+article img {width: 100%; height: auto;}
+article pre {margin: 8px 0; padding: 5px 10px; background: #EDEDED; font-size: 14px; line-height: 1.5em;}
 article strong {font-weight: 600;}
 article a {text-decoration: underline;}
 article a:hover {text-decoration: none;}
+@media screen and (min-width: 1050px) {
+	article {width: 60%; margin: 0 auto;}
+}
 
 footer {padding: 50px 0; color: #FFF; text-align: center;}
 footer p {line-height: 1.5em;}
