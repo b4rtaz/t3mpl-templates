@@ -11,6 +11,7 @@ build app-landing-page/template.yaml
 build auto-app-landing-page/template.yaml
 build bsod-404/template.yaml
 build coming-soon/template.yaml
+build curated-stack/template.yaml
 build dark-poole/template.yaml
 build desktop-app/template.yaml
 build fuse-core/template.yaml
