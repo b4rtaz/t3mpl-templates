@@ -8,9 +8,9 @@
 	{{#each $PAGES.ENTRIES.[0].$SUB_PAGES}}
 	<item>
 		<title>{{DATA.TITLE}}</title>
-		<link>{{../COMMON.META.BASE_URL}}{{FILE_PATH}}</link>
+		<link>{{$page_link_url FILE_PATH}}</link>
 		<pubDate>{{$format_dt DATA.DATE 'ddd, DD MMM YYYY HH:mm:ss ZZ'}}</pubDate>
-		<guid>{{../COMMON.META.BASE_URL}}{{FILE_PATH}}</guid>
+		<guid>{{FILE_PATH}}</guid>
 	</item>
 	{{/each}}
 	{{/if}}

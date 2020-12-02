@@ -1,0 +1,168 @@
+meta:
+  version: 1
+  name: Curated Stack
+  license: MIT
+  author: Sandoche Adittane
+  exportable: true
+  homepageUrl: https://github.com/sandoche/CuratedStack-nocode-template
+  donationUrl: https://www.paypal.me/kanbanote
+  filePaths:
+    - license.txt
+    - index.html
+    - category.html
+    - header.partial
+    - footer.partial
+    - assets/style.css
+    - assets/favicon.png
+    - assets/og-image.png
+    - assets/logo.png
+
+dataContract:
+
+  CATEGORIES:
+    sections:
+      CATEGORIES:
+        properties:
+          TITLE:
+            type: (text)
+            defaultValue: Tools & Resources
+          DESCRIPTION:
+            type: (text)
+            defaultValue: Find the tool you need in each category
+          CATEGORIES:
+            type: (collection)
+            defaultOccurrences: 6
+            properties:
+              UTF8_ICON:
+                type: (text)
+                defaultValue: 🔨
+              TITLE:
+                type: (text)
+                defaultValue: Communication
+              FILE_PATH:
+                type: (text)
+              DESCRIPTION:
+                type: (text)
+                defaultValue: 4 best communication tools
+              ITEMS:
+                type: (collection)
+                defaultOccurrences: 3
+                properties:
+                  ICON:
+                    type: (image)
+                    width: 128
+                    height: 128
+                    defaultFilePath: assets/logo.png
+                  TITLE:
+                    type: (text)
+                    defaultValue: Get Started with CuratedStack (No-Code) Template
+                  DESCRIPTION:
+                    type: (text)
+                    defaultValue: Create for free your own curated collection of websites for free
+                  URL:
+                    type: (text)
+                    defaultValue: https://t3mpl.n4no.com/
+  CONTACT:
+    sections:
+      CONTACT:
+        properties:
+          SHOW:
+            type: (boolean)
+            defaultValue: true
+          TITLE:
+            type: (text)
+            defaultValue: Any tool to suggest?
+          DESCRIPTION:
+            type: (text)
+            defaultValue: Any idea? Any amazing tool forgotten? Feel free to send it!
+          LINK_TITLE:
+            type: (text)
+            defaultValue: Contact
+          LINK_HREF:
+            type: (text)
+            defaultValue: https://www.sandoche.com/?contact
+
+  COMMON:
+    _label: Common
+    sections:
+      META:
+        _label: Meta
+        properties:
+          LANGUAGE:
+            type: (choice)
+            valuesSet: (iso6391Languages)
+            defaultValue: en
+          DIRECTION:
+            type: (choice)
+            valuesSet: (direction)
+            defaultValue: auto
+          TITLE:
+            type: (text)
+            defaultValue: My Page Title
+            _label: Page Title
+          DESCRIPTION:
+            type: (text)
+            defaultValue: My Page Description
+            _label: Page Description
+          FAVICON:
+            type: (image)
+            width: 32
+            height: 32
+            defaultFilePath: assets/favicon.png
+          OG_IMAGE:
+            type: (image)
+            width: 1200
+            height: 630
+            defaultFilePath: assets/og-image.png
+            _label: Open Graph Image
+          PRE_HTML:
+            type: (html)
+            _label: Pre HTML
+            _description: i.e. cookie banner
+            required: false
+
+      HEADER:
+        properties:
+          TITLE:
+            type: (text)
+            defaultValue: CuratedStack (No-Code) Template
+          DESCRIPTION:
+            type: (text)
+            defaultValue: Build a curated directory of websites without or with code 
+          BACK:
+            type: (text)
+            defaultValue: Back
+          LOGO:
+            type: (image)
+            defaultFilePath: assets/logo.png
+            width: 150
+            height: 150
+
+      FOOTER:
+        properties:
+          COPYRIGHT:
+            type: (text)
+            defaultValue: All rights reserved
+          POWERED_BY:
+            type: (boolean)
+            defaultValue: true
+          TEMPLATE_BY:
+            type: (boolean)
+            defaultValue: true
+          POST_HTML:
+            type: (html)
+            _label: Post HTML
+            _description: i.e. plugins, tracking
+            required: false
+
+pages:
+  INDEX:
+    filePath: index.html
+    templateFilePath: index.html
+
+  CATEGORY:
+    filePath: category.html
+    templateFilePath: category.html
+    multiplier:
+      dataPath: CATEGORIES.CATEGORIES.CATEGORIES
+      fileNameDataPath: FILE_PATH

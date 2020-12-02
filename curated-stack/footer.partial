@@ -1,0 +1,30 @@
+
+<footer class="footer">
+	{{#if CONTACT.CONTACT.SHOW}}
+	<div class="container">
+		<div class="contact">
+			<h2 class="section-title">{{CONTACT.CONTACT.TITLE}}</h2>
+			<p class="section-description">{{CONTACT.CONTACT.DESCRIPTION}}</p>
+			<a class="button" href="{{CONTACT.CONTACT.LINK_HREF}}" target="_blank">{{CONTACT.CONTACT.LINK_TITLE}}</a>
+		</div>
+	</div>
+	{{/if}}
+
+	<div class="copyright">
+		<div class="container">
+			{{{$copyright}}} {{COMMON.FOOTER.COPYRIGHT}}
+			{{#if COMMON.FOOTER.POWERED_BY}}
+				&mdash; {{{$powered_by}}}
+			{{/if}}
+			{{#if COMMON.FOOTER.TEMPLATE_BY}}
+				&mdash; Template by <a href="https://www.sandoche.com">Sandoche</a>
+			{{/if}}
+		</div>
+	</div>
+</footer>
+
+{{#if COMMON.FOOTER.POST_HTML}}
+	{{{$html COMMON.FOOTER.POST_HTML}}}
+{{/if}}
+</body>
+</html>

@@ -1,4 +1,4 @@
-{{> header title=$PAGE.DATA.TITLE description=($markdown2text $PAGE.DATA.CONTENT 160)}}
+{{> header title=$PAGE.DATA.TITLE description=($markdown2text $PAGE.DATA.CONTENT 160) ogImage=($markdown_thumbnail $PAGE.DATA.CONTENT)}}
 
 <div class="block">
 	<article>

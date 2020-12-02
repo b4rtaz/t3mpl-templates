@@ -31,12 +31,13 @@ a {color: #000;}
 
 header a {padding: 0 5px; font-weight: 600; text-transform: uppercase;}
 header a:hover {color: #FFF; background: #000;}
-header nav ul li {display: inline-block; padding-left: 20px;}
+header nav ul li {display: inline-block;}
 @media screen and (max-width: 1049px) {
-	header {padding: 10px 0; text-align: center;}
-	header h2, header nav {padding: 10px 15px;}
+	header {text-align: center;}
+	header h2, header nav {padding: 15px 0;}
 	header h2 a {font-size: 22px; line-height: 1.35em;}
 	header nav a {font-size: 16px; line-height: 1.35em;}
+	header nav ul li {padding: 0 3px;}
 }
 @media screen and (min-width: 1050px) {
 	header {display: table;}
@@ -44,6 +45,7 @@ header nav ul li {display: inline-block; padding-left: 20px;}
 	header h2, header nav {display: table-cell;}
 	header h2, header nav {padding: 50px 0;}
 	header nav {text-align: right;}
+	header nav ul li {padding-left: 20px;}
 	html[dir=rtl] header nav {text-align: left;}
 }
 
@@ -76,6 +78,7 @@ section.items ul li p a:hover {text-decoration: none;}
 article {line-height: 1.5em; padding-bottom: 50px;}
 article p, article h2, article h3, article h4, article ul, article ol {padding: 8px 0;}
 article p {text-align: justify;}
+article p[align=center] {text-align: center;}
 article h1 {font-size: 34px; font-weight: 800; line-height: 1.5em;}
 article h2 {font-size: 30px; font-weight: 800; line-height: 1.5em;}
 article h3 {font-size: 25px; font-weight: 600; line-height: 1.5em;}
@@ -84,9 +87,10 @@ article ul, article ol {margin-left: 30px;}
 article ul {list-style-type: disc;}
 article ol {list-style-type: decimal;}
 article ul ul, article ul ol, article ol ul, article ol ol {padding-top: 0; padding-bottom: 0;}
-article img {width: 100%; height: auto;}
-article pre {margin: 8px 0; padding: 5px 10px; background: #EDEDED; font-size: 14px; line-height: 1.5em;}
+article img:not([width]) {width: 100%; height: auto;}
+article pre {margin: 8px 0; padding: 5px 10px; overflow: auto; background: #EDEDED; font-size: 14px; line-height: 1.5em;}
 article strong {font-weight: 600;}
+article em {font-style: italic;}
 article a {text-decoration: underline;}
 article a:hover {text-decoration: none;}
 @media screen and (min-width: 1050px) {

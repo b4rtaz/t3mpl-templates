@@ -1,5 +1,5 @@
 meta:
-  version: 1
+  version: 2
   name: Scriptor
   license: MIT
   author: JustGoodThemes
@@ -127,10 +127,6 @@ dataContract:
 
       META:
         properties:
-          BASE_URL:
-            type: (text)
-            _label: Site base URL
-            _description: i.e. https://example.com/
           LANGUAGE:
             type: (choice)
             valuesSet: (iso6391Languages)

@@ -1,0 +1,38 @@
+{{> header title=$PAGE.DATA.TITLE description=$PAGE.DATA.DESCRIPTION}}
+
+<div class="topbar">
+	{{{$page_link_start $PAGES.INDEX.FILE_PATH 'back-button'}}}← {{COMMON.HEADER.BACK}}{{{$page_link_end}}}
+	{{{$page_link_start $PAGES.INDEX.FILE_PATH 'logo'}}}<img src="{{{$image COMMON.HEADER.LOGO}}}" alt="{{COMMON.HEADER.TITLE}}" class="logo" />{{{$page_link_end}}}
+</div>
+
+<div class="categorybar">
+{{#each $PAGES.CATEGORY}}
+	{{{$page_link_start FILE_PATH 'category-button'}}}
+		{{DATA.TITLE}}
+		<span class="emoji">{{DATA.UTF8_ICON}}</span>
+	{{{$page_link_end}}}
+{{/each}}
+</div>
+
+<header class="header container">
+	<a href="/" class="nuxt-link-active"></a>
+	<p class="icon">{{$PAGE.DATA.UTF8_ICON}}</p>
+	<h1 class="title">{{$PAGE.DATA.TITLE}}</h1>
+	<h2 class="subtitle">{{$PAGE.DATA.DESCRIPTION}}</h2>
+</header>
+
+<div class="resources">
+	<div class="container block">
+		{{#each $PAGE.DATA.ITEMS}}
+		<a href="{{URL}}" target="_blank" class="resource-item">
+			<img src="{{{$image ICON}}}" alt="" class="icon">
+			<div class="text">
+				<h3 class="title">{{TITLE}}</h3>
+				<p class="description">{{DESCRIPTION}}</p>
+			</div>
+		</a>
+		{{/each}}
+	</div>
+</div>
+
+{{> footer}}

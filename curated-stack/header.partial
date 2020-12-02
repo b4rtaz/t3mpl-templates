@@ -2,21 +2,23 @@
 <html dir="{{COMMON.META.DIRECTION}}" lang="{{COMMON.META.LANGUAGE}}">
 <head>
 	<meta charset="UTF-8" />
-	<title>{{#if title}}{{title}} - {{/if}}{{COMMON.META.TITLE}}</title>
 
+	<title>{{#if title}}{{title}} - {{/if}}{{COMMON.META.TITLE}}</title>
 	<meta name="description" content="{{#if description}}{{description}}{{else}}{{COMMON.META.DESCRIPTION}}{{/if}}" />
+
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="icon" href="{{$image COMMON.META.FAVICON}}" />
 
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:title" content="{{#if title}}{{title}} - {{/if}}{{COMMON.META.TITLE}}" />
-	<meta name="twitter:image" content="{{#if ogImage}}{{ogImage}}{{else}}{{$image COMMON.META.OG_IMAGE}}{{/if}}" />
 	<meta name="twitter:description" content="{{#if description}}{{description}}{{else}}{{COMMON.META.DESCRIPTION}}{{/if}}" />
+	<meta name="twitter:image" content="{{#if ogImage}}{{ogImage}}{{else}}{{$image COMMON.META.OG_IMAGE}}{{/if}}" />
 
 	<meta property="og:title" content="{{#if title}}{{title}} - {{/if}}{{COMMON.META.TITLE}}" />
 	<meta property="og:description" content="{{#if description}}{{description}}{{else}}{{COMMON.META.DESCRIPTION}}{{/if}}" />
 	<meta property="og:image" content="{{#if ogImage}}{{ogImage}}{{else}}{{$image COMMON.META.OG_IMAGE}}{{/if}}" />
 
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap" rel="stylesheet">
 	{{{$css 'assets/style.css'}}}
 
 	{{#if COMMON.META.PRE_HTML}}
@@ -24,24 +26,3 @@
 	{{/if}}
 </head>
 <body>
-<div class="main">
-	<header class="block">
-		<h2>{{{$page_link $PAGES.INDEX.FILE_PATH COMMON.HEADER.SITE_NAME}}}</h2>
-
-		<nav>
-			<ul>
-			{{#each $PAGES.PAGE}}
-			{{#if DATA.HEADER}}
-				<li>
-					{{{$page_link FILE_PATH DATA.TITLE}}}
-				</li>
-			{{/if}}
-			{{/each}}
-			{{#each COMMON.HEADER.LINKS}}
-				<li>
-					<a href="{{URL}}"{{#if OPEN_IN_NEW_TAB}} targe="_blank"{{/if}}>{{TITLE}}</a>
-				</li>
-			{{/each}}
-			</ul>
-		</nav>
-	</header>

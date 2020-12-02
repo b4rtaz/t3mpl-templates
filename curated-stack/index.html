@@ -1,0 +1,26 @@
+{{> header}}
+
+<header class="header container">
+	{{{$page_link_start $PAGES.INDEX.FILE_PATH}}}
+		<img alt="Logo" class="logo" alt="{{COMMON.HEADER.TITLE}}" src="{{{$image COMMON.HEADER.LOGO}}}">
+	{{{$page_link_end}}}
+	<h1 class="title">{{COMMON.HEADER.TITLE}}</h1>
+	<h2 class="subtitle">{{COMMON.HEADER.DESCRIPTION}}</h2>
+</header>
+
+<section class="tools">
+	<div class="container">
+		<h2 class="section-title">{{CATEGORIES.CATEGORIES.TITLE}}</h2>
+		<p class="section-description">{{CATEGORIES.CATEGORIES.DESCRIPTION}}</p>
+		<div class="categories">
+			{{#each $PAGES.CATEGORY}}
+			{{{$page_link_start FILE_PATH 'category-item'}}}
+				<p class="icon">{{DATA.UTF8_ICON}}</p>
+				<p class="name">{{DATA.TITLE}}</p>
+			{{{$page_link_end}}}
+			{{/each}}
+		</div>
+	</div>
+</section>
+
+{{> footer}}
