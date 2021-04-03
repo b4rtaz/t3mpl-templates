@@ -1,0 +1,31 @@
+
+<footer class="footer">
+	<div class="box">
+		<div class="footer-copy">
+			{{{$copyright}}} {{COMMON.FOOTER.COPYRIGHT}}
+			{{#if COMMON.FOOTER.POWERED_BY}}
+			<span class="separator">&mdash;</span> {{{$powered_by}}}
+			{{/if}}
+			{{#if COMMON.FOOTER.TEMPLATE_BY}}
+			<span class="separator">&mdash;</span> Template by <a href="https://n4no.com/">b4rtaz</a>
+			{{/if}}
+		</div>
+		<div class="footer-links">
+			{{#each $PAGES.PAGE}}
+				{{#if DATA.SHOW_IN_FOOTER}}
+					{{{$page_link FILE_PATH DATA.TITLE}}}
+				{{/if}}
+			{{/each}}
+			{{#each COMMON.FOOTER.LINKS}}
+				<a href="{{URL}}"{{#if OPEN_IN_NEW_TAB}} target="_blank"{{/if}}>{{TITLE}}</a>
+			{{/each}}
+		</div>
+	</div>
+</footer>
+
+{{#if COMMON.FOOTER.POST_HTML}}
+	{{{$html COMMON.FOOTER.POST_HTML}}}
+{{/if}}
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+{{> header}}
+
+<section class="details">
+
+	<div class="details-info">
+		<div class="details-box">
+			<div class="details-box-content">
+				{{{$markdown LANDING.DETAILS.DESCRIPTION}}}
+			</div>
+		</div>
+	</div>
+
+	<div class="details-preview">
+		<img width="1080" height="1920" src="{{{$image LANDING.DETAILS.SCREENSHOT}}}" alt="" />
+	</div>
+
+	<div class="details-links">
+		<div class="details-box">
+			<div class="details-box-content">
+				<ul>
+				{{#each LANDING.DETAILS.LINKS}}
+					<li><a href="{{URL}}" class="link {{ICON}}">{{TITLE}}</a></li>
+				{{/each}}
+				</ul>
+			</div>
+		</div>
+	</div>
+
+</section>
+
+{{> footer}}

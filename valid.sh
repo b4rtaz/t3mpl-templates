@@ -21,6 +21,7 @@ build mobile-app-landing-page/template.yaml
 build modern-resume/template.yaml
 build profile-card/template.yaml
 build qr-menu/template.yaml
+build quick-mobile-app-page/template.yaml
 build scriptor/template.yaml
 build t3mpl-one/template.yaml
 build tailwind-landing-page/template.yaml

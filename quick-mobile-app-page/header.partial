@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html dir="{{COMMON.META.DIRECTION}}" lang="{{COMMON.META.LANGUAGE}}">
+<head>
+	<meta charset="UTF-8" />
+	<title>{{#if _title}}{{_title}} - {{/if}}{{COMMON.META.TITLE}}</title>
+
+	<meta name="description" content="{{#if _description}}{{_description}}{{else}}{{COMMON.META.DESCRIPTION}}{{/if}}" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="icon" href="{{$image COMMON.META.FAVICON}}" />
+
+	<meta property="og:title" content="{{#if _title}}{{_title}} - {{/if}}{{COMMON.META.TITLE}}" />
+	<meta property="og:description" content="{{#if _description}}{{_description}}{{else}}{{COMMON.META.DESCRIPTION}}{{/if}}" />
+	<meta property="og:image" content="{{$image COMMON.META.OG_IMAGE}}" />
+
+	{{{$css 'assets/style.css'}}}
+	<style>
+		.details-links ul li a.link {background-color: {{COMMON.THEME.PRIMARY_COLOR}};}
+		.article a {color: {{COMMON.THEME.PRIMARY_COLOR}};}
+	</style>
+
+	{{#if COMMON.META.PRE_HTML}}
+		{{{$html COMMON.META.PRE_HTML}}}
+	{{/if}}
+</head>
+<body>
+
+<header class="header">
+	<div class="box">
+		<h1>
+			{{{$page_link_start $PAGES.INDEX.FILE_PATH}}}
+				<img src="{{$image COMMON.HEADER.LOGO}}" width="52" height="52" alt="" />
+				<strong>{{COMMON.META.TITLE}}</strong>
+			{{{$page_link_end}}}
+		</h1>
+
+		<nav class="header-links">
+			{{#each $PAGES.PAGE}}
+				{{#if DATA.SHOW_IN_HEADER}}
+					{{{$page_link FILE_PATH DATA.TITLE}}}
+				{{/if}}
+			{{/each}}
+			{{#each COMMON.HEADER.LINKS}}
+				<a href="{{URL}}"{{#if OPEN_IN_NEW_TAB}} target="_blank"{{/if}}>{{TITLE}}</a>
+			{{/each}}
+		</nav>
+	</div>
+</header>
