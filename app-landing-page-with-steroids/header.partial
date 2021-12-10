@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html dir="{{COMMON.META.DIRECTION}}" lang="{{COMMON.META.LANGUAGE}}" {{#unless COMMON.THEME.DEFAULT_MODE}}class="theme-dark"{{/unless}}>
+<head>
+	<meta charset="UTF-8" />
+	<title>{{#if title}}{{title}} - {{/if}}{{COMMON.META.TITLE}}</title>
+
+	<meta name="description" content="{{COMMON.META.DESCRIPTION}}" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="icon" href="{{$image COMMON.META.FAVICON}}" />
+
+	<meta property="og:title" content="{{#if title}}{{title}} - {{/if}}{{COMMON.META.TITLE}}" />
+	<meta property="og:description" content="{{COMMON.META.DESCRIPTION}}" />
+	<meta property="og:image" content="{{$image COMMON.META.OG_IMAGE}}" />
+	{{#if COMMON.META.KEYWORDS}}
+	<meta name="keywords" content="{{COMMON.META.KEYWORDS}}"/>
+	{{/if}}
+	{{#if COMMON.META.AUTHOR}}
+	<meta name="copyright" content="{{COMMON.META.AUTHOR}}" />
+	<meta name="author" content="{{COMMON.META.AUTHOR}}" />
+	{{/if}}
+	<meta name="robots" content="{{#if COMMON.META.ROBOTS_INDEX}}index{{else}}noindex{{/if}},{{#if COMMON.META.ROBOTS_LINKS}}follow{{else}}nofollow{{/if}}" />
+	<style>
+		{{> assets/style}}
+	</style>
+	{{{$css 'assets/tobi.css'}}}
+	{{#if COMMON.META.PRE_HTML}}
+		{{{$html COMMON.META.PRE_HTML}}}
+	{{/if}}
+</head>
+	<body>
+		<main>
+		{{#if COMMON.THEME.TOOGLE_THEME}}
+			<input class="bulb" id="toggle-theme" type="checkbox" readOnly {{#if COMMON.THEME.DEFAULT_MODE}}checked{{/if}}/>
+		{{/if}}

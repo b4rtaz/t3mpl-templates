@@ -1,0 +1,54 @@
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__container">
+					<p class="footer__love">
+						{{{$copyright}}} {{COMMON.FOOTER.COPYRIGHT}}
+						{{#if COMMON.FOOTER.TEMPLATE_BY}}
+							&mdash; Template by <a href="https://javimogan.com" target="_blank">javimogan</a>
+						{{/if}}
+						{{#if COMMON.FOOTER.POWERED_BY}}
+							&mdash; {{{$powered_by}}}
+						{{/if}}
+					</p>
+					<ul class="footer__links">
+						{{#each $PAGES.PAGE}}
+							<li class="footer__link">
+								{{{$page_link FILE_PATH DATA.TITLE}}}
+							</li>
+						{{/each}}
+						{{#each COMMON.FOOTER.LINKS}}
+							<li class="footer__link">
+								<a href="{{URL}}"{{#if OPEN_IN_NEW_TAB}} targe="_blank"{{/if}}>{{TITLE}}</a>
+							</li>
+						{{/each}}
+					</ul>
+				</div>
+			</div>
+		</footer>
+
+		{{{$script 'assets/tobi.min.js'}}}
+		<script>
+			window.onload = function () {
+				var tobi = new Tobi();
+			};
+		</script>
+		{{#if COMMON.THEME.TOOGLE_THEME}}
+		<script>
+			window.onload = function () {
+					document.querySelector('#toggle-theme').addEventListener('change', (event) => {
+						if(event.target.checked){
+							document.getElementsByTagName("html")[0].className = "";
+						}else{
+							document.getElementsByTagName("html")[0].className = "theme-dark";
+						}
+						
+					});
+			};
+		</script>
+		{{/if}}
+		{{#if COMMON.FOOTER.POST_HTML}}
+			{{{$html COMMON.FOOTER.POST_HTML}}}
+		{{/if}}
+  </body>
+</html>

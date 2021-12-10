@@ -1,0 +1,13 @@
+{{> header title=$PAGE.DATA.TITLE}}
+<article class="page">
+	<header class="page__header">
+		<h1 class="page__title">{{{$PAGE.DATA.TITLE}}}</h1>
+	</header>
+	<div class="page__content">
+		{{{$markdown $PAGE.DATA.CONTENT}}}
+	</div>
+</article>
+
+
+
+{{> footer}}

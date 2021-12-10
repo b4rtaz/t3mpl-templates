@@ -10,6 +10,7 @@ To get more information check [T3MPL Editor](https://github.com/b4rtaz/t3mpl-edi
 
 ``[name](path) - [category] - [author](url) - [license]``
 
+* [App Landing Page With Steroids](/app-landing-page-with-steroids) - Mobile App - [Javi Mogan](https://javimogan.com) - MIT
 * [App Landing Page](/app-landing-page) - Mobile App - [Robin Bansal](https://github.com/robinbansal/App-Landing_Page) - MIT
 * [Auto App Landing Page](/auto-app-landing-page) - Mobile App - [Emil Baehr](https://github.com/milbaehr/automatic-app-landing-page) - MIT
 * [BSOD 404](/bsod-404) - Error Page - [Ian Gloude](https://codepen.io/igloude/pen/qNNWKr) - MIT
