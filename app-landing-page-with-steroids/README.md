@@ -1,4 +1,4 @@
-# # Mobile App Landing Page Template with Steroids
+# Mobile App Landing Page Template with Steroids
 <p align="center">
 <img src="https://github.com/javimogan/AppLandingPageWithSteroids/blob/main/assets/Preview.png?raw=true"
 	width = 400
