@@ -1,0 +1,321 @@
+meta:
+  version: 1
+  name: App Landing Page With Steroids
+  license: MIT
+  author: javimogan
+  exportable: true
+  homepageUrl: https://javimogan.com
+  donationUrl: https://www.paypal.me/javimogan
+  filePaths:
+    - license
+    - index.html
+    - page.html
+    - header.partial
+    - footer.partial
+    - assets/style.partial
+    - assets/tobi.css
+    - assets/tobi.min.js
+    - assets/favicon.png
+    - assets/feature-graphic.png
+    - assets/og-image.png
+    - assets/ios-mask-border-128.svg
+    - assets/ios-mask.svg
+    - assets/logo.png
+    - assets/light-background.svg
+    - assets/dark-background.svg
+    - assets/google-play-badge.png
+    - assets/ios-badge.svg
+    - assets/pwa-badge.png
+    - assets/producthunt.png
+    - assets/screenshot.png
+    - content/markdown/description.md
+    - content/markdown/privacy.md
+
+dataContract:
+
+  APP:
+    sections:
+      APP:
+        properties:
+          APP_NAME:
+            type: (text)
+            defaultValue: Mobile App Name
+          TAGLINE:
+            type: (text)
+            defaultValue: A super tagline for the mobile app
+          ICON:
+            type: (image)
+            width: 1024
+            height: 1024
+            defaultFilePath: assets/logo.png
+          SHOW_FEATURE:
+            _label: Show feature graphic?
+            required: false
+            type: (boolean)
+            defaultValue: true
+          FEATURE_TITLE:
+            required: false
+            type: (text)
+            defaultValue: Feature graphic
+          FEAUTE_GRAPHIC:
+            type: (image)
+            width: 1024
+            height: 500
+            defaultFilePath: assets/feature-graphic.png
+          GOOGLE_PLAY_IMAGE:
+            type: (image)
+            defaultFilePath: assets/google-play-badge.png
+          GOOGLE_PLAY_URL:
+            type: (text)
+            required: false
+            defaultValue: https://play.google.com/store
+          GOOGLE_PLAY_TITLE:
+            type: (text)
+            defaultValue: Get on Google Play
+
+          IOS_IMAGE:
+            type: (image)
+            defaultFilePath: assets/ios-badge.svg
+          IOS_URL:
+            type: (text)
+            required: false
+            defaultValue: https://www.apple.com/ios/app-store/
+          IOS_TITLE:
+            type: (text)
+            defaultValue: Get on Appstore
+
+          WEB_APP_IMAGE:
+            type: (image)
+            defaultFilePath: assets/pwa-badge.png
+          WEB_APP_URL:
+            type: (text)
+            required: false
+            defaultValue: https://github.com/
+          WEB_APP_TITLE:
+            type: (text)
+            defaultValue: Go to website
+
+      SCREENSHOTS:
+        properties:
+          SHOW:
+            type: (boolean)
+            defaultValue: true
+          TITLE:
+            type: (text)
+            defaultValue: Screenshots
+            
+          INCLUDE_LANDSCAPE:
+            _label: One or more screenshots are in landscape?
+            type: (boolean)
+            defaultValue: false
+          IMAGES:
+            type: (collection)
+            defaultOccurrences: 3
+            properties:
+              IMAGE:
+                type: (image)
+                defaultFilePath: assets/screenshot.png
+
+      DESCRIPTION:
+        properties:
+          SHOW:
+            type: (boolean)
+            defaultValue: true
+          TITLE:
+            type: (text)
+            defaultValue: Description
+          TEXT:
+            type: (markdown)
+            defaultFilePath: content/markdown/description.md
+
+      FEATURED_IN:
+        properties:
+          SHOW:
+            type: (boolean)
+            defaultValue: true
+          TITLE:
+            type: (text)
+            defaultValue: Featured in
+          FEATURES:
+            type: (collection)
+            defaultOccurrences: 2
+            properties:
+              IMAGE:
+                type: (image)
+                width: 596
+                height: 360
+                defaultFilePath: assets/producthunt.png
+              URL:
+                type: (text)
+                defaultValue: https://github.com/
+
+  PAGES:
+    sections:
+      PAGES:
+        properties:
+          PAGES:
+            type: (collection)
+            defaultOccurrences: 1
+            properties:
+              TITLE:
+                type: (text)
+                defaultValue: Privacy
+              FILE_NAME:
+                type: (text)
+                required: false
+              CONTENT:
+                type: (markdown)
+                defaultFilePath: content/markdown/privacy.md
+
+  COMMON:
+    _label: Common
+    sections:
+      THEME:
+        _label: Theme
+        properties:
+          TOOGLE_THEME:
+            _label: Toogle theme?
+            type: (boolean)
+            defaultValue: true
+          DEFAULT_MODE:
+            _label: Light theme? (Light/Dark)
+            type: (boolean)
+            defaultValue: true
+      LIGHT_THEME:
+        _label: Light theme
+        properties:
+          BACKGROUND_COLOR:
+            _label: Background color
+            type: (color)
+            defaultValue: '#ffffff'
+          BACKGROUND_IMAGE:
+            _label: Background image
+            type: (image)
+            defaultFilePath: assets/light-background.svg
+          TEXT_COLOR:
+            _label: Text color
+            type: (color)
+            defaultValue: '#222222'
+          FOOTER_TEXT_COLOR:
+            _label: Footer text color
+            type: (color)
+            defaultValue: '#8a8a8a'
+          LINK_HOVER_TEXT_COLOR:
+            _label: Link hover text color
+            type: (color)
+            defaultValue: '#454545'
+      DARK_THEME:
+        _label: Dark theme
+        properties:
+          BACKGROUND_COLOR:
+            _label: Background color
+            type: (color)
+            defaultValue: '#121212'
+          BACKGROUND_IMAGE:
+            _label: Background image
+            type: (image)
+            defaultFilePath: assets/dark-background.svg
+          TEXT_COLOR:
+            _label: Text color
+            type: (color)
+            defaultValue: '#8a8a8a'
+          FOOTER_TEXT_COLOR:
+            _label: Footer text color
+            type: (color)
+            defaultValue: '#8a8a8a'
+          LINK_HOVER_TEXT_COLOR:
+            _label: Link hover text color
+            type: (color)
+            defaultValue: '#454545'
+      META:
+        _label: Meta
+        properties:
+          AUTHOR:
+            required: false
+            type: (text)
+            _label: Author
+          LANGUAGE:
+            type: (choice)
+            valuesSet: (iso6391Languages)
+            defaultValue: en
+          DIRECTION:
+            type: (choice)
+            valuesSet: (direction)
+            defaultValue: auto
+          TITLE:
+            type: (text)
+            defaultValue: My Page Title
+            _label: Page Title
+          DESCRIPTION:
+            type: (text)
+            defaultValue: My Page Description
+            _label: Page Description
+          KEYWORDS:
+            required: false
+            _label: Keywords (Separated by comma)
+            type: (text)
+          FAVICON:
+            type: (image)
+            width: 32
+            height: 32
+            defaultFilePath: assets/favicon.png
+          OG_IMAGE:
+            type: (image)
+            width: 1200
+            height: 630
+            defaultFilePath: assets/og-image.png
+            _label: Open Graph Image
+          PRE_HTML:
+            type: (html)
+            _label: Pre HTML
+            _description: i.e. cookie banner
+            required: false
+          ROBOTS_INDEX:
+            _label: Robots index
+            type: (boolean)
+            defaultValue: true
+          ROBOTS_LINKS:
+            _label: Robots follow links
+            type: (boolean)
+            defaultValue: false
+      FOOTER:
+        properties:
+          COPYRIGHT:
+            type: (text)
+            defaultValue: All rights reserved
+          TEMPLATE_BY:
+            type: (boolean)
+            defaultValue: true
+          POWERED_BY:
+            type: (boolean)
+            defaultValue: true
+          POST_HTML:
+            type: (html)
+            _label: Post HTML
+            _description: i.e. plugins, tracking
+            required: false
+          LINKS:
+            type: (collection)
+            defaultOccurrences: 1
+            properties:
+              TITLE:
+                type: (text)
+                defaultValue: GitHub
+              URL:
+                type: (text)
+                defaultValue: https://javimogan.com/
+              OPEN_IN_NEW_TAB:
+                type: (boolean)
+                defaultValue: true
+
+pages:
+  INDEX:
+    filePath: index.html
+    templateFilePath: index.html
+
+  PAGE:
+    filePath: page.html
+    templateFilePath: page.html
+    multiplier:
+      dataPath: PAGES.PAGES.PAGES
+      fileNameDataPath: FILE_NAME
