@@ -278,3 +278,10 @@
     transform: rotate(360deg);
   }
 }
+
+.app__logo-wrapper {
+  background-image: url("ios-mask-border-128.svg");
+}
+.app__logo {
+  mask-image: url("ios-mask.svg");
+}
