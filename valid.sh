@@ -8,6 +8,7 @@ build()
 
 t3mpl version
 build app-landing-page/template.yaml
+build app-landing-page-with-steroids/template.yaml
 build auto-app-landing-page/template.yaml
 build bsod-404/template.yaml
 build coming-soon/template.yaml

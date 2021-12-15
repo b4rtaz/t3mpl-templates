@@ -1,6 +1,6 @@
 # T3MPL Templates
 
-[![Build Status](https://travis-ci.com/b4rtaz/t3mpl-templates.svg?branch=master)](https://travis-ci.com/b4rtaz/t3mpl-templates) [![Twitter: b4rtaz](https://img.shields.io/twitter/follow/b4rtaz.svg?style=social)](https://twitter.com/b4rtaz)
+[![Build Status](https://travis-ci.com/b4rtaz/t3mpl-templates.svg?branch=master)](https://app.travis-ci.com/github/b4rtaz/t3mpl-templates) [![Twitter: b4rtaz](https://img.shields.io/twitter/follow/b4rtaz.svg?style=social)](https://twitter.com/b4rtaz)
 
 This repository contains T3MPL templates which are available on [t3mpl.n4no.com](https://t3mpl.n4no.com).
 
